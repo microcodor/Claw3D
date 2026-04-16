@@ -9,7 +9,7 @@ import {
   useState,
 } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { MessageSquare, ChevronDown, Mic } from "lucide-react";
+import { MessageSquare, ChevronDown, Mic, X } from "lucide-react";
 import { RetroOffice3D } from "@/features/retro-office/RetroOffice3D";
 import type { OfficeAgent } from "@/features/retro-office/core/types";
 import { RunningAvatarLoader } from "@/features/agents/components/RunningAvatarLoader";
@@ -898,6 +898,8 @@ export function OfficeScreen({
   >([]);
   const [openClawConsoleCollapsed, setOpenClawConsoleCollapsed] =
     useState(true);
+  const [emptyFleetBannerDismissed, setEmptyFleetBannerDismissed] =
+    useState(false);
   const [openClawConsoleSearch, setOpenClawConsoleSearch] = useState("");
   const [openClawConsoleCopyStatus, setOpenClawConsoleCopyStatus] = useState<
     "idle" | "copied" | "error"
@@ -4192,7 +4194,10 @@ export function OfficeScreen({
     (agent) => agent.hasUnseenActivity,
   ).length;
   const showEmptyFleetBanner =
-    status === "connected" && agentsLoaded && state.agents.length === 0;
+    !emptyFleetBannerDismissed &&
+    status === "connected" &&
+    agentsLoaded &&
+    state.agents.length === 0;
   const emptyFleetMessage =
     state.error?.trim() ||
     "Connected to the gateway, but no agents were loaded into the office.";
@@ -4472,42 +4477,50 @@ export function OfficeScreen({
       {showEmptyFleetBanner ? (
         <div className="pointer-events-none fixed left-1/2 top-16 z-40 w-full max-w-xl -translate-x-1/2 px-4">
           <div className="pointer-events-auto rounded-lg border border-amber-400/35 bg-black/80 px-4 py-3 shadow-2xl backdrop-blur">
-            <div className="flex items-center justify-between gap-3">
-              <div>
+            <div className="flex items-start justify-between gap-3">
+              <div className="flex-1">
                 <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-amber-200/80">
                   Office fleet status
                 </p>
                 <p className="mt-1 text-sm text-amber-50">{emptyFleetMessage}</p>
               </div>
-              <div className="flex shrink-0 items-center gap-2">
-                <button
-                  type="button"
-                  className="ui-btn-secondary px-3 py-2 text-xs font-semibold tracking-[0.05em] text-foreground"
-                  onClick={() => {
-                    handleOpenCreateAgentWizard();
-                  }}
-                >
-                  Add Agent
-                </button>
-                <button
-                  type="button"
-                  className="ui-btn-secondary px-3 py-2 text-xs font-semibold tracking-[0.05em] text-foreground"
-                  onClick={() => {
-                    handleOpenCompanyBuilder();
-                  }}
-                >
-                  Build Company
-                </button>
-                <button
-                  type="button"
-                  className="ui-btn-secondary px-3 py-2 text-xs font-semibold tracking-[0.05em] text-foreground"
-                  onClick={() => {
-                    void loadAgents({ forceSettings: true });
-                  }}
-                >
-                  Retry
-                </button>
-              </div>
+              <button
+                type="button"
+                className="shrink-0 rounded p-1 text-amber-200/60 transition-colors hover:bg-amber-400/10 hover:text-amber-200"
+                onClick={() => setEmptyFleetBannerDismissed(true)}
+                aria-label="关闭提示"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+            <div className="mt-3 flex items-center gap-2">
+              <button
+                type="button"
+                className="ui-btn-secondary px-3 py-2 text-xs font-semibold tracking-[0.05em] text-foreground"
+                onClick={() => {
+                  handleOpenCreateAgentWizard();
+                }}
+              >
+                Add Agent
+              </button>
+              <button
+                type="button"
+                className="ui-btn-secondary px-3 py-2 text-xs font-semibold tracking-[0.05em] text-foreground"
+                onClick={() => {
+                  handleOpenCompanyBuilder();
+                }}
+              >
+                Build Company
+              </button>
+              <button
+                type="button"
+                className="ui-btn-secondary px-3 py-2 text-xs font-semibold tracking-[0.05em] text-foreground"
+                onClick={() => {
+                  void loadAgents({ forceSettings: true });
+                }}
+              >
+                Retry
+              </button>
             </div>
           </div>
         </div>
