@@ -1,7 +1,10 @@
+'use client';
+
 import { Suspense } from "react";
 import { RunningAvatarLoader } from "@/features/agents/components/RunningAvatarLoader";
 import { AgentStoreProvider } from "@/features/agents/state/store";
 import { OfficeScreen } from "@/features/office/screens/OfficeScreen";
+import { MultiScreenLayout } from "@/features/office/components/MultiScreenLayout";
 
 const ENABLED_RE = /^(1|true|yes|on)$/i;
 
@@ -36,7 +39,9 @@ export default function OfficePage() {
   return (
     <AgentStoreProvider>
       <Suspense fallback={<OfficeLoadingFallback />}>
-        <OfficeScreen showOpenClawConsole={showOpenClawConsole} />
+        <MultiScreenLayout
+          officeScreen={<OfficeScreen showOpenClawConsole={showOpenClawConsole} />}
+        />
       </Suspense>
     </AgentStoreProvider>
   );

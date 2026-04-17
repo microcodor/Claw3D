@@ -670,6 +670,9 @@ export const useTaskBoardController = ({
   const stateRef = useRef(state);
   const hydratedRef = useRef(false);
   const recoveredAgentRequestKeyRef = useRef<Record<string, string>>({});
+  const prevAgentsRef = useRef<AgentState[]>([]);
+  const prevRunLogRef = useRef<RunRecord[]>([]);
+  const syncCardsInitializedRef = useRef(false); // ✅ 新增：跟踪首次初始化
   const [loading, setLoading] = useState(true);
   const [cronJobs, setCronJobs] = useState<CronJobSummary[]>([]);
   const [cronLoading, setCronLoading] = useState(false);
@@ -963,6 +966,44 @@ export const useTaskBoardController = ({
 
   useEffect(() => {
     if (!hydratedRef.current) return;
+    
+    // On first run, just initialize refs without dispatching
+    if (!syncCardsInitializedRef.current) {
+      syncCardsInitializedRef.current = true;
+      prevAgentsRef.current = agents;
+      prevRunLogRef.current = runLog;
+      return;
+    }
+    
+    // Check if agents or runLog have meaningfully changed
+    const agentsChanged = 
+      agents.length !== prevAgentsRef.current.length ||
+      agents.some((agent, index) => {
+        const prev = prevAgentsRef.current[index];
+        return !prev || 
+          agent.agentId !== prev.agentId ||
+          agent.status !== prev.status ||
+          agent.runId !== prev.runId ||
+          agent.awaitingUserInput !== prev.awaitingUserInput ||
+          agent.lastActivityAt !== prev.lastActivityAt;
+      });
+    
+    const runLogChanged =
+      runLog.length !== prevRunLogRef.current.length ||
+      runLog.some((run, index) => {
+        const prev = prevRunLogRef.current[index];
+        return !prev ||
+          run.runId !== prev.runId ||
+          run.endedAt !== prev.endedAt ||
+          run.outcome !== prev.outcome;
+      });
+    
+    if (!agentsChanged && !runLogChanged) return;
+    
+    // Update refs
+    prevAgentsRef.current = agents;
+    prevRunLogRef.current = runLog;
+    
     const nextCards = stateRef.current.cards.map((card) =>
       syncCardWithAgent(syncCardWithLinkedRun(card, runLog), agents),
     );

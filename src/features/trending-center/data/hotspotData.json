@@ -1,0 +1,177 @@
+{
+  "platforms": [
+    {"id": "toutiao-hot", "name": "toutiao", "displayName": "今日头条", "category": "综合", "url": "https://www.toutiao.com", "itemsCount": 50, "updatedAt": "2026-04-16T10:30:00.000Z"},
+    {"id": "weibo-hot", "name": "weibo", "displayName": "微博热搜", "category": "社交", "url": "https://weibo.com", "itemsCount": 50, "updatedAt": "2026-04-16T10:30:00.000Z"},
+    {"id": "zhihu-hot", "name": "zhihu", "displayName": "知乎热榜", "category": "问答", "url": "https://www.zhihu.com", "itemsCount": 50, "updatedAt": "2026-04-16T10:30:00.000Z"},
+    {"id": "douyin-hot", "name": "douyin", "displayName": "抖音热点", "category": "短视频", "url": "https://www.douyin.com", "itemsCount": 50, "updatedAt": "2026-04-16T10:30:00.000Z"},
+    {"id": "bilibili-hot", "name": "bilibili", "displayName": "B站热门", "category": "视频", "url": "https://www.bilibili.com", "itemsCount": 50, "updatedAt": "2026-04-16T10:30:00.000Z"},
+    {"id": "baidu-hot", "name": "baidu", "displayName": "百度热搜", "category": "搜索", "url": "https://www.baidu.com", "itemsCount": 50, "updatedAt": "2026-04-16T10:30:00.000Z"},
+    {"id": "36kr-news", "name": "36kr", "displayName": "36氪", "category": "科技", "url": "https://36kr.com", "itemsCount": 50, "updatedAt": "2026-04-16T10:30:00.000Z"},
+    {"id": "ithome-news", "name": "ithome", "displayName": "IT之家", "category": "科技", "url": "https://www.ithome.com", "itemsCount": 50, "updatedAt": "2026-04-16T10:30:00.000Z"},
+    {"id": "juejin-hot", "name": "juejin", "displayName": "掘金热榜", "category": "技术", "url": "https://juejin.cn", "itemsCount": 50, "updatedAt": "2026-04-16T10:30:00.000Z"},
+    {"id": "v2ex-hot", "name": "v2ex", "displayName": "V2EX", "category": "社区", "url": "https://www.v2ex.com", "itemsCount": 50, "updatedAt": "2026-04-16T10:30:00.000Z"}
+  ],
+  "feeds": {
+    "toutiao-hot": {
+      "platform": {"id": "toutiao-hot", "name": "toutiao", "displayName": "今日头条", "category": "综合"},
+      "data": [
+        {"id": "tt-1", "title": "AI大模型技术突破：GPT-5即将发布", "url": "#", "hotValue": 9850000, "rank": 1},
+        {"id": "tt-2", "title": "量子计算机实现重大突破 运算速度提升千倍", "url": "#", "hotValue": 8920000, "rank": 2},
+        {"id": "tt-3", "title": "新能源汽车销量创历史新高", "url": "#", "hotValue": 7650000, "rank": 3},
+        {"id": "tt-4", "title": "元宇宙概念股集体大涨", "url": "#", "hotValue": 6780000, "rank": 4},
+        {"id": "tt-5", "title": "5G技术全面普及 6G研发加速", "url": "#", "hotValue": 5890000, "rank": 5},
+        {"id": "tt-6", "title": "脑机接口技术获得新进展", "url": "#", "hotValue": 5120000, "rank": 6},
+        {"id": "tt-7", "title": "人工智能在医疗领域的应用", "url": "#", "hotValue": 4560000, "rank": 7},
+        {"id": "tt-8", "title": "区块链技术赋能数字经济", "url": "#", "hotValue": 3980000, "rank": 8},
+        {"id": "tt-9", "title": "智能家居市场规模突破千亿", "url": "#", "hotValue": 3450000, "rank": 9},
+        {"id": "tt-10", "title": "虚拟现实技术走进日常生活", "url": "#", "hotValue": 2890000, "rank": 10}
+      ],
+      "total": 10, "hasMore": false, "updatedAt": "2026-04-16T10:30:00.000Z"
+    },
+    "weibo-hot": {
+      "platform": {"id": "weibo-hot", "name": "weibo", "displayName": "微博热搜", "category": "社交"},
+      "data": [
+        {"id": "wb-1", "title": "明星恋情曝光引发热议", "url": "#", "hotValue": 12500000, "rank": 1},
+        {"id": "wb-2", "title": "网络安全事件警示录", "url": "#", "hotValue": 10200000, "rank": 2},
+        {"id": "wb-3", "title": "短视频平台新规出台", "url": "#", "hotValue": 8900000, "rank": 3},
+        {"id": "wb-4", "title": "电商大促销活动开启", "url": "#", "hotValue": 7600000, "rank": 4},
+        {"id": "wb-5", "title": "环保话题引发全民讨论", "url": "#", "hotValue": 6800000, "rank": 5},
+        {"id": "wb-6", "title": "教育改革新政策发布", "url": "#", "hotValue": 5900000, "rank": 6},
+        {"id": "wb-7", "title": "健康生活方式成为新趋势", "url": "#", "hotValue": 5100000, "rank": 7},
+        {"id": "wb-8", "title": "文化遗产保护受到关注", "url": "#", "hotValue": 4300000, "rank": 8},
+        {"id": "wb-9", "title": "体育赛事精彩瞬间回顾", "url": "#", "hotValue": 3700000, "rank": 9},
+        {"id": "wb-10", "title": "旅游市场复苏势头强劲", "url": "#", "hotValue": 3100000, "rank": 10}
+      ],
+      "total": 10, "hasMore": false, "updatedAt": "2026-04-16T10:30:00.000Z"
+    },
+    "zhihu-hot": {
+      "platform": {"id": "zhihu-hot", "name": "zhihu", "displayName": "知乎热榜", "category": "问答"},
+      "data": [
+        {"id": "zh-1", "title": "如何看待AI取代人类工作的趋势？", "url": "#", "hotValue": 5600000, "rank": 1},
+        {"id": "zh-2", "title": "程序员35岁危机真的存在吗？", "url": "#", "hotValue": 4800000, "rank": 2},
+        {"id": "zh-3", "title": "量子力学的本质是什么？", "url": "#", "hotValue": 4200000, "rank": 3},
+        {"id": "zh-4", "title": "如何高效学习一门新技术？", "url": "#", "hotValue": 3700000, "rank": 4},
+        {"id": "zh-5", "title": "元宇宙是未来还是泡沫？", "url": "#", "hotValue": 3200000, "rank": 5},
+        {"id": "zh-6", "title": "数据隐私保护的重要性", "url": "#", "hotValue": 2800000, "rank": 6},
+        {"id": "zh-7", "title": "开源软件的商业模式探讨", "url": "#", "hotValue": 2400000, "rank": 7},
+        {"id": "zh-8", "title": "远程办公的利与弊", "url": "#", "hotValue": 2100000, "rank": 8},
+        {"id": "zh-9", "title": "如何培养批判性思维？", "url": "#", "hotValue": 1800000, "rank": 9},
+        {"id": "zh-10", "title": "终身学习的意义何在？", "url": "#", "hotValue": 1500000, "rank": 10}
+      ],
+      "total": 10, "hasMore": false, "updatedAt": "2026-04-16T10:30:00.000Z"
+    },
+    "douyin-hot": {
+      "platform": {"id": "douyin-hot", "name": "douyin", "displayName": "抖音热点", "category": "短视频"},
+      "data": [
+        {"id": "dy-1", "title": "创意短视频制作技巧分享", "url": "#", "hotValue": 15600000, "rank": 1},
+        {"id": "dy-2", "title": "美食探店：网红餐厅打卡", "url": "#", "hotValue": 13200000, "rank": 2},
+        {"id": "dy-3", "title": "健身达人分享减肥秘籍", "url": "#", "hotValue": 11800000, "rank": 3},
+        {"id": "dy-4", "title": "搞笑段子合集爆笑来袭", "url": "#", "hotValue": 10500000, "rank": 4},
+        {"id": "dy-5", "title": "旅行vlog：探索未知世界", "url": "#", "hotValue": 9200000, "rank": 5},
+        {"id": "dy-6", "title": "化妆教程：新手必看", "url": "#", "hotValue": 8100000, "rank": 6},
+        {"id": "dy-7", "title": "宠物日常：萌宠出没", "url": "#", "hotValue": 7300000, "rank": 7},
+        {"id": "dy-8", "title": "科技测评：最新数码产品", "url": "#", "hotValue": 6500000, "rank": 8},
+        {"id": "dy-9", "title": "音乐翻唱：经典歌曲重现", "url": "#", "hotValue": 5800000, "rank": 9},
+        {"id": "dy-10", "title": "生活小妙招实用分享", "url": "#", "hotValue": 5100000, "rank": 10}
+      ],
+      "total": 10, "hasMore": false, "updatedAt": "2026-04-16T10:30:00.000Z"
+    },
+    "bilibili-hot": {
+      "platform": {"id": "bilibili-hot", "name": "bilibili", "displayName": "B站热门", "category": "视频"},
+      "data": [
+        {"id": "bl-1", "title": "游戏实况：高能操作集锦", "url": "#", "hotValue": 8900000, "rank": 1},
+        {"id": "bl-2", "title": "动画MAD：燃向混剪", "url": "#", "hotValue": 7600000, "rank": 2},
+        {"id": "bl-3", "title": "知识科普：宇宙的奥秘", "url": "#", "hotValue": 6800000, "rank": 3},
+        {"id": "bl-4", "title": "鬼畜视频：魔性洗脑", "url": "#", "hotValue": 6100000, "rank": 4},
+        {"id": "bl-5", "title": "技术教程：编程入门", "url": "#", "hotValue": 5400000, "rank": 5},
+        {"id": "bl-6", "title": "影视解说：经典电影回顾", "url": "#", "hotValue": 4800000, "rank": 6},
+        {"id": "bl-7", "title": "音乐创作：原创歌曲发布", "url": "#", "hotValue": 4200000, "rank": 7},
+        {"id": "bl-8", "title": "美食制作：家常菜教学", "url": "#", "hotValue": 3700000, "rank": 8},
+        {"id": "bl-9", "title": "手工DIY：创意作品展示", "url": "#", "hotValue": 3200000, "rank": 9},
+        {"id": "bl-10", "title": "Vlog日常：生活记录", "url": "#", "hotValue": 2800000, "rank": 10}
+      ],
+      "total": 10, "hasMore": false, "updatedAt": "2026-04-16T10:30:00.000Z"
+    },
+    "baidu-hot": {
+      "platform": {"id": "baidu-hot", "name": "baidu", "displayName": "百度热搜", "category": "搜索"},
+      "data": [
+        {"id": "bd-1", "title": "国际局势最新动态", "url": "#", "hotValue": 11200000, "rank": 1},
+        {"id": "bd-2", "title": "经济政策调整影响分析", "url": "#", "hotValue": 9800000, "rank": 2},
+        {"id": "bd-3", "title": "科技创新成果发布", "url": "#", "hotValue": 8500000, "rank": 3},
+        {"id": "bd-4", "title": "社会热点事件追踪", "url": "#", "hotValue": 7400000, "rank": 4},
+        {"id": "bd-5", "title": "娱乐圈最新八卦", "url": "#", "hotValue": 6600000, "rank": 5},
+        {"id": "bd-6", "title": "体育赛事实时报道", "url": "#", "hotValue": 5800000, "rank": 6},
+        {"id": "bd-7", "title": "健康养生知识普及", "url": "#", "hotValue": 5100000, "rank": 7},
+        {"id": "bd-8", "title": "教育资讯最新发布", "url": "#", "hotValue": 4500000, "rank": 8},
+        {"id": "bd-9", "title": "房产市场行情分析", "url": "#", "hotValue": 3900000, "rank": 9},
+        {"id": "bd-10", "title": "汽车行业新闻速递", "url": "#", "hotValue": 3400000, "rank": 10}
+      ],
+      "total": 10, "hasMore": false, "updatedAt": "2026-04-16T10:30:00.000Z"
+    },
+    "36kr-news": {
+      "platform": {"id": "36kr-news", "name": "36kr", "displayName": "36氪", "category": "科技"},
+      "data": [
+        {"id": "kr-1", "title": "独角兽企业融资动态", "url": "#", "hotValue": 4200000, "rank": 1},
+        {"id": "kr-2", "title": "创业公司估值排行榜", "url": "#", "hotValue": 3800000, "rank": 2},
+        {"id": "kr-3", "title": "投资机构最新布局", "url": "#", "hotValue": 3400000, "rank": 3},
+        {"id": "kr-4", "title": "科技巨头战略调整", "url": "#", "hotValue": 3100000, "rank": 4},
+        {"id": "kr-5", "title": "新兴产业发展趋势", "url": "#", "hotValue": 2800000, "rank": 5},
+        {"id": "kr-6", "title": "商业模式创新案例", "url": "#", "hotValue": 2500000, "rank": 6},
+        {"id": "kr-7", "title": "企业数字化转型实践", "url": "#", "hotValue": 2200000, "rank": 7},
+        {"id": "kr-8", "title": "市场竞争格局分析", "url": "#", "hotValue": 1900000, "rank": 8},
+        {"id": "kr-9", "title": "行业并购重组消息", "url": "#", "hotValue": 1700000, "rank": 9},
+        {"id": "kr-10", "title": "创新技术应用场景", "url": "#", "hotValue": 1500000, "rank": 10}
+      ],
+      "total": 10, "hasMore": false, "updatedAt": "2026-04-16T10:30:00.000Z"
+    },
+    "ithome-news": {
+      "platform": {"id": "ithome-news", "name": "ithome", "displayName": "IT之家", "category": "科技"},
+      "data": [
+        {"id": "it-1", "title": "Windows 12系统曝光", "url": "#", "hotValue": 6700000, "rank": 1},
+        {"id": "it-2", "title": "iPhone新机配置泄露", "url": "#", "hotValue": 5900000, "rank": 2},
+        {"id": "it-3", "title": "安卓系统重大更新", "url": "#", "hotValue": 5200000, "rank": 3},
+        {"id": "it-4", "title": "芯片技术突破进展", "url": "#", "hotValue": 4600000, "rank": 4},
+        {"id": "it-5", "title": "云计算服务价格调整", "url": "#", "hotValue": 4100000, "rank": 5},
+        {"id": "it-6", "title": "网络安全漏洞预警", "url": "#", "hotValue": 3600000, "rank": 6},
+        {"id": "it-7", "title": "软件开发工具推荐", "url": "#", "hotValue": 3200000, "rank": 7},
+        {"id": "it-8", "title": "硬件评测：性能对比", "url": "#", "hotValue": 2800000, "rank": 8},
+        {"id": "it-9", "title": "互联网服务体验报告", "url": "#", "hotValue": 2400000, "rank": 9},
+        {"id": "it-10", "title": "科技产品购买指南", "url": "#", "hotValue": 2100000, "rank": 10}
+      ],
+      "total": 10, "hasMore": false, "updatedAt": "2026-04-16T10:30:00.000Z"
+    },
+    "juejin-hot": {
+      "platform": {"id": "juejin-hot", "name": "juejin", "displayName": "掘金热榜", "category": "技术"},
+      "data": [
+        {"id": "jj-1", "title": "前端框架性能优化实战", "url": "#", "hotValue": 3200000, "rank": 1},
+        {"id": "jj-2", "title": "后端架构设计最佳实践", "url": "#", "hotValue": 2900000, "rank": 2},
+        {"id": "jj-3", "title": "微服务治理经验分享", "url": "#", "hotValue": 2600000, "rank": 3},
+        {"id": "jj-4", "title": "数据库优化技巧总结", "url": "#", "hotValue": 2300000, "rank": 4},
+        {"id": "jj-5", "title": "DevOps工具链搭建", "url": "#", "hotValue": 2100000, "rank": 5},
+        {"id": "jj-6", "title": "算法题解析与思路", "url": "#", "hotValue": 1900000, "rank": 6},
+        {"id": "jj-7", "title": "代码重构案例研究", "url": "#", "hotValue": 1700000, "rank": 7},
+        {"id": "jj-8", "title": "测试驱动开发实践", "url": "#", "hotValue": 1500000, "rank": 8},
+        {"id": "jj-9", "title": "容器化部署指南", "url": "#", "hotValue": 1300000, "rank": 9},
+        {"id": "jj-10", "title": "技术选型决策分析", "url": "#", "hotValue": 1100000, "rank": 10}
+      ],
+      "total": 10, "hasMore": false, "updatedAt": "2026-04-16T10:30:00.000Z"
+    },
+    "v2ex-hot": {
+      "platform": {"id": "v2ex-hot", "name": "v2ex", "displayName": "V2EX", "category": "社区"},
+      "data": [
+        {"id": "v2-1", "title": "程序员职业发展讨论", "url": "#", "hotValue": 1800000, "rank": 1},
+        {"id": "v2-2", "title": "技术栈选择建议", "url": "#", "hotValue": 1600000, "rank": 2},
+        {"id": "v2-3", "title": "远程工作经验交流", "url": "#", "hotValue": 1400000, "rank": 3},
+        {"id": "v2-4", "title": "开发工具推荐分享", "url": "#", "hotValue": 1200000, "rank": 4},
+        {"id": "v2-5", "title": "编程语言对比分析", "url": "#", "hotValue": 1100000, "rank": 5},
+        {"id": "v2-6", "title": "项目管理心得体会", "url": "#", "hotValue": 980000, "rank": 6},
+        {"id": "v2-7", "title": "技术面试经验总结", "url": "#", "hotValue": 870000, "rank": 7},
+        {"id": "v2-8", "title": "开源项目推荐列表", "url": "#", "hotValue": 760000, "rank": 8},
+        {"id": "v2-9", "title": "工作生活平衡探讨", "url": "#", "hotValue": 650000, "rank": 9},
+        {"id": "v2-10", "title": "技术社区文化讨论", "url": "#", "hotValue": 540000, "rank": 10}
+      ],
+      "total": 10, "hasMore": false, "updatedAt": "2026-04-16T10:30:00.000Z"
+    }
+  },
+  "updatedAt": "2026-04-16T10:30:00.000Z"
+}

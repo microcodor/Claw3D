@@ -2949,7 +2949,7 @@ export function RetroOffice3D({
     return () => {
       window.clearInterval(timer);
     };
-  }, [renderAgentsRef]);
+  }, []);  // Empty dependency array - only run once on mount
   const activeMonitor = monitorAgentId
     ? (monitorByAgentId[monitorAgentId] ?? null)
     : null;

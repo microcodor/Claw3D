@@ -1,0 +1,354 @@
+/* Main container */
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(8px, 1vw, 16px);
+  gap: clamp(6px, 0.8vw, 12px);
+  overflow: hidden;
+  position: relative;
+  background: radial-gradient(ellipse at 80% 20%, rgba(255, 107, 53, 0.06) 0%, transparent 50%), #0e0a04;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: clamp(6px, 0.8vw, 10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Courier New', monospace;
+  font-size: clamp(9px, 0.7vw, 11px);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.title {
+  font-size: clamp(10px, 0.9vw, 14px);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.badge {
+  padding: 2px 8px;
+  font-size: clamp(8px, 0.65vw, 10px);
+  font-family: 'Courier New', monospace;
+  border-radius: 2px;
+  border: 1px solid;
+}
+
+.badgeOrange {
+  color: rgba(255, 107, 53, 0.9);
+  border-color: rgba(255, 107, 53, 0.5);
+  background: rgba(255, 107, 53, 0.1);
+}
+
+.badgeCyan {
+  color: rgba(0, 212, 255, 0.9);
+  border-color: rgba(0, 212, 255, 0.5);
+  background: rgba(0, 212, 255, 0.1);
+}
+
+/* Body layout */
+.body {
+  flex: 1;
+  display: flex;
+  gap: clamp(6px, 0.8vw, 12px);
+  min-height: 0;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(6px, 0.8vw, 12px);
+  min-height: 0;
+}
+
+.colList {
+  width: 40%;
+  flex-shrink: 0;
+}
+
+.colAnalysis {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Card */
+.card {
+  background: rgba(14, 10, 4, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: clamp(8px, 1vw, 12px);
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+/* Trending panel */
+.trendingPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+.panelTitle {
+  font-size: clamp(10px, 0.9vw, 14px);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.sourceTabs {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.sourceTab {
+  padding: 2px 6px;
+  font-size: clamp(8px, 0.65vw, 10px);
+  font-family: 'Courier New', monospace;
+  color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.sourceTab:hover {
+  color: rgba(255, 107, 53, 0.9);
+  border-color: rgba(255, 107, 53, 0.5);
+}
+
+.sourceTab.active {
+  color: rgba(255, 107, 53, 0.9);
+  border-color: rgba(255, 107, 53, 0.5);
+  background: rgba(255, 107, 53, 0.1);
+}
+
+/* Trending list */
+.trendList {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.trendScrollWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: transform 0.05s linear;
+}
+
+.trendRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 6px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+  min-height: 58px;
+}
+
+.trendRow:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.trendRank {
+  width: 22px;
+  text-align: center;
+  flex-shrink: 0;
+  font-size: clamp(10px, 0.85vw, 13px);
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+}
+
+.trendRank.rankTop {
+  font-size: clamp(11px, 1vw, 15px);
+}
+
+.trendRank.rank1 {
+  color: rgba(255, 107, 53, 0.9);
+  text-shadow: 0 0 8px rgba(255, 107, 53, 0.6);
+}
+
+.trendRank.rank2 {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.trendRank.rank3 {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.trendInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.trendTitle {
+  font-size: clamp(10px, 0.85vw, 13px);
+  color: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.trendSub {
+  display: flex;
+  gap: 8px;
+  font-size: clamp(8px, 0.65vw, 10px);
+  margin-top: 2px;
+}
+
+.trendRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.trendHeat {
+  font-size: clamp(10px, 0.85vw, 13px);
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Courier New', monospace;
+}
+
+.trendDelta {
+  font-size: clamp(9px, 0.7vw, 11px);
+  font-family: 'Courier New', monospace;
+}
+
+/* Chart card */
+.chartCard {
+  flex-shrink: 0;
+}
+
+.chartContainer {
+  margin-top: 8px;
+}
+
+.lineChart {
+  width: 100%;
+  display: block;
+}
+
+.chartLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(8px, 0.6vw, 10px);
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+/* Analysis card */
+.analysisCard {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.videoHeader {
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.videoTitle {
+  font-size: clamp(11px, 1vw, 15px);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.videoMeta {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: 'Courier New', monospace;
+  font-size: clamp(9px, 0.7vw, 11px);
+}
+
+.videoAnalysis {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+  min-height: 0;
+}
+
+.analysisCol {
+  flex: 1;
+  min-width: 0;
+}
+
+.sectionTitle {
+  font-size: clamp(9px, 0.7vw, 11px);
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+  font-family: 'Courier New', monospace;
+}
+
+/* Loading/Empty states */
+.loading,
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: clamp(10px, 0.85vw, 13px);
+}
+
+/* Glow effects */
+.glowCyan {
+  color: rgba(0, 212, 255, 0.9);
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.6);
+}
+
+.glowGreen {
+  color: rgba(0, 255, 136, 0.9);
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+}
+
+.glowOrange {
+  color: rgba(255, 107, 53, 0.9);
+  text-shadow: 0 0 8px rgba(255, 107, 53, 0.6);
+}

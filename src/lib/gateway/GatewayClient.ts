@@ -22,6 +22,7 @@ import { resolveStudioProxyGatewayUrl } from "@/lib/gateway/proxy-url";
 import { ensureGatewayReloadModeHotForLocalStudio } from "@/lib/gateway/gatewayReloadMode";
 import { isLocalGatewayUrl } from "@/lib/gateway/local-gateway";
 import { GatewayResponseError } from "@/lib/gateway/errors";
+import { loadGatewayToken, saveGatewayToken } from "@/lib/gateway/tokenStorage";
 
 const gatewayDebugEnabled = process.env.NODE_ENV !== "production";
 
@@ -757,6 +758,10 @@ export const useGatewayConnection = (
         const settings = envelope.settings ?? null;
         const gateway = settings?.gateway ?? null;
         if (cancelled) return;
+        
+        // Load cached token from localStorage
+        const cachedCredentials = loadGatewayToken();
+        
         const normalizedDefaults = normalizeLocalGatewayDefaults(envelope.localGatewayDefaults);
         setLocalGatewayDefaults(normalizedDefaults);
         const lastKnownGood =
@@ -805,6 +810,7 @@ export const useGatewayConnection = (
         const resolvedUrl = hasSavedUrl
           ? gateway!.url
           : lastKnownGoodForSelectedAdapter?.url ||
+            cachedCredentials.gatewayUrl ||
             normalizedDefaults?.url ||
             DEFAULT_UPSTREAM_GATEWAY_URL;
         const baseProfiles = {
@@ -833,19 +839,20 @@ export const useGatewayConnection = (
           resolveDefaultGatewayProfile(nextAdapterType, normalizedDefaults)
         );
         const nextGatewayUrl = selectedProfile.url;
-        const nextToken = selectedProfile.token;
+        // Prefer cached token over saved token
+        const nextToken = cachedCredentials.token || selectedProfile.token;
         loadedGatewaySettings.current = {
           gatewayUrl: nextGatewayUrl.trim(),
           token: nextToken,
           adapterType: nextAdapterType,
           profiles: mergedProfiles,
-          hasLastKnownGood: Boolean(lastKnownGoodForSelectedAdapter?.url),
+          hasLastKnownGood: Boolean(lastKnownGoodForSelectedAdapter?.url) || Boolean(cachedCredentials.token),
         };
         setGatewayUrl(nextGatewayUrl);
         setToken(nextToken);
         setSelectedAdapterTypeState(nextAdapterType);
         setAdapterProfiles(mergedProfiles);
-        setHasLastKnownGoodState(Boolean(lastKnownGoodForSelectedAdapter?.url));
+        setHasLastKnownGoodState(Boolean(lastKnownGoodForSelectedAdapter?.url) || Boolean(cachedCredentials.token));
       } catch (err) {
         if (!cancelled) {
           const message = err instanceof Error ? err.message : "Failed to load gateway settings.";
@@ -880,6 +887,7 @@ export const useGatewayConnection = (
         setError(null);
         if (nextStatus === "connected") {
           setConnectErrorCode(null);
+          hasConnectedOnceRef.current = true;
         } else {
           setDetectedAdapterType(null);
         }
@@ -991,6 +999,10 @@ export const useGatewayConnection = (
           : "openclaw";
       setDetectedAdapterType(nextDetectedAdapterType);
       setHasLastKnownGoodState(nextDetectedAdapterType === selectedAdapterType);
+      
+      // Save token to localStorage on successful connection
+      saveGatewayToken(token, gatewayUrl);
+      
       settingsCoordinator.schedulePatch({
         gateway: {
           lastKnownGood: {

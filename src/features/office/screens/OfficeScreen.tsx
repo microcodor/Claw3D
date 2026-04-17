@@ -156,6 +156,7 @@ import { useOfficeSkillsMarketplace } from "@/features/office/hooks/useOfficeSki
 import { useOfficeStandupController } from "@/features/office/hooks/useOfficeStandupController";
 import { useRunLog } from "@/features/office/hooks/useRunLog";
 import { useTaskBoardController } from "@/features/office/tasks/useTaskBoardController";
+import type { TaskBoardCard, TaskBoardStatus } from "@/features/office/tasks/types";
 import {
   OnboardingWizard,
   useOnboardingState,
@@ -868,6 +869,7 @@ export function OfficeScreen({
     useAgentStore();
   const [agentsLoaded, setAgentsLoaded] = useState(false);
   const [didAttemptGatewayConnect, setDidAttemptGatewayConnect] = useState(false);
+  const [manualConnectDialogOpen, setManualConnectDialogOpen] = useState(false);
   const [showDelayedGatewayLoadingOverlay, setShowDelayedGatewayLoadingOverlay] =
     useState(false);
   const [showDelayedGatewayConnectOverlay, setShowDelayedGatewayConnectOverlay] =
@@ -2586,6 +2588,17 @@ export function OfficeScreen({
     };
   }, [agentsLoaded, loadAgents, status]);
 
+  // Listen for custom event to open connect dialog
+  useEffect(() => {
+    const handleOpenConnectDialog = () => {
+      setManualConnectDialogOpen(true);
+    };
+    window.addEventListener('openGatewayConnectDialog', handleOpenConnectDialog);
+    return () => {
+      window.removeEventListener('openGatewayConnectDialog', handleOpenConnectDialog);
+    };
+  }, []);
+
   useEffect(() => {
     setOfficeTriggerState((previous) =>
       reconcileOfficeAnimationTriggerState({
@@ -2736,7 +2749,58 @@ export function OfficeScreen({
     gatewayUrl,
     agents: standupAgentSnapshots,
   });
-  const taskBoard = useTaskBoardController({
+  
+  // TEMPORARY: Disable TaskBoard to fix infinite loop
+  // TODO: Re-enable after fixing the infinite loop issue
+  const taskBoard = useMemo(() => ({
+    state: {
+      cards: [],
+      selectedCardId: null,
+    },
+    loading: false,
+    sharedTasksLoading: false,
+    sharedTasksError: null,
+    gatewayTasksLoading: false,
+    gatewayTasksError: null,
+    gatewayTasksSupported: 'unknown' as const,
+    cronJobs: [],
+    cronLoading: false,
+    cronError: null,
+    cardsByStatus: {
+      todo: [],
+      in_progress: [],
+      blocked: [],
+      review: [],
+      done: [],
+    },
+    selectedCard: null,
+    activeRuns: [],
+    taskCaptureDebug: {
+      lastStatus: 'idle' as const,
+      lastUpdatedAt: null,
+      lastTitle: null,
+      lastTaskId: null,
+      lastSessionKey: null,
+      lastMessage: null,
+      detectedCount: 0,
+      visibleCardCount: 0,
+      totalCardCount: 0,
+      sharedTasksSupported: true,
+      sharedTasksLoading: false,
+      sharedTasksError: null,
+    },
+    createManualCard: async (_input?: Partial<TaskBoardCard>) => ({ id: '', title: '', description: '', status: 'todo' as const, source: 'claw3d_manual' as const, sourceEventId: null, assignedAgentId: null, createdAt: '', updatedAt: '', playbookJobId: null, runId: null, channel: null, externalThreadId: null, lastActivityAt: null, notes: [], isArchived: false, isInferred: false }),
+    updateCard: async (_cardId: string, _patch: Partial<TaskBoardCard>) => {},
+    moveCard: async (_cardId: string, _nextStatus: TaskBoardStatus) => {},
+    removeCard: async (_cardId: string) => {},
+    selectCard: (_cardId: string | null) => {},
+    refreshCronJobs: async () => {},
+    refreshSharedTasks: async () => {},
+    refreshRemoteTasks: async () => {},
+    ingestGatewayEvent: () => {},
+  }), []);
+  
+  /* const taskBoard = useTaskBoardController({
     gatewayUrl,
     settingsCoordinator,
     client,
@@ -2745,7 +2809,8 @@ export function OfficeScreen({
     agents: state.agents,
     runLog,
     standup: standupController,
-  });
+  }); */
+  
   const ingestTaskBoardEvent = taskBoard.ingestGatewayEvent;
   taskBoardEventHandlerRef.current = ingestTaskBoardEvent;
   taskBoardRefreshRef.current = async () => {
@@ -4174,11 +4239,14 @@ export function OfficeScreen({
         !shouldPromptForConnect &&
         ((!didAttemptGatewayConnect && showDelayedGatewayLoadingOverlay) ||
           (status === "connecting" && showDelayedGatewayLoadingOverlay))));
+  
   const showGatewayConnectOverlay =
-    connectPromptReady &&
-    status === "disconnected" &&
-    !agentsLoaded &&
-    (shouldPromptForConnect || showDelayedGatewayConnectOverlay);
+    manualConnectDialogOpen ||
+    (connectPromptReady &&
+      status === "disconnected" &&
+      !agentsLoaded &&
+      didAttemptGatewayConnect &&
+      (shouldPromptForConnect || showDelayedGatewayConnectOverlay));
 
   const runningCount = state.agents.filter(
     (agent) =>
@@ -4237,6 +4305,7 @@ export function OfficeScreen({
               onAdapterTypeChange={setSelectedAdapterType}
               onUseLocalDefaults={useLocalGatewayDefaults}
               onConnect={() => void connect()}
+              onClose={manualConnectDialogOpen ? () => setManualConnectDialogOpen(false) : undefined}
             />
           </div>
         </div>

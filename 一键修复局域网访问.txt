@@ -1,0 +1,236 @@
+# Claw3D 局域网访问问题 - 一键修复
+
+## 问题描述
+- ✓ 服务器本地可以访问: curl http://localhost:3000
+- ✗ 局域网其他机器无法访问: http://192.168.0.132:3000
+
+## 原因
+服务只监听 127.0.0.1 (localhost)，没有监听 0.0.0.0 (所有网络接口)
+
+## 解决方案
+
+### 方案 1: 一键修复（最快，复制粘贴）
+
+在服务器上运行这一条命令：
+
+```bash
+cd ~/claw3d && pm2 stop claw3d && sed -i '/^HOST=/d' .env && sed -i '/^# *HOST=/d' .env && sed -i '/^PORT=/d' .env && sed -i '/^# *PORT=/d' .env && sed -i '1i HOST=0.0.0.0\nPORT=3000' .env && pm2 restart claw3d && sleep 3 && echo "=== 新的监听地址 ===" && netstat -tulpn | grep 3000 && echo "" && echo "=== 访问地址 ===" && echo "http://$(hostname -I | awk '{print $1}'):3000"
+```
+
+### 方案 2: 使用修复脚本
+
+```bash
+cd ~/claw3d
+bash fix-host-config.sh
+```
+
+### 方案 3: 手动修复（3步）
+
+```bash
+# 1. 编辑 .env 文件
+cd ~/claw3d
+nano .env
+
+# 2. 找到 HOST 这一行，确保是这样（没有 # 注释）：
+HOST=0.0.0.0
+PORT=3000
+
+# 如果有 # HOST=127.0.0.1 或 # HOST=localhost，删除 # 并改为：
+HOST=0.0.0.0
+
+# 3. 保存并退出
+# 按 Ctrl+O 保存
+# 按 Enter 确认
+# 按 Ctrl+X 退出
+
+# 4. 重启服务
+pm2 restart claw3d
+
+# 5. 验证
+netstat -tulpn | grep 3000
+# 应该显示: 0.0.0.0:3000 (不是 127.0.0.1:3000)
+```
+
+## 验证修复
+
+### 1. 检查监听地址
+```bash
+netstat -tulpn | grep 3000
+```
+
+**期望输出**:
+```
+tcp        0      0 0.0.0.0:3000            0.0.0.0:*               LISTEN      12345/node
+```
+
+**错误输出**:
+```
+tcp        0      0 127.0.0.1:3000          0.0.0.0:*               LISTEN      12345/node
+```
+
+### 2. 测试本地访问
+```bash
+curl -I http://localhost:3000
+```
+
+### 3. 测试局域网访问
+从另一台设备运行：
+```bash
+curl -I http://192.168.0.132:3000
+```
+
+或在浏览器打开：
+```
+http://192.168.0.132:3000
+```
+
+## 如果仍然无法访问
+
+### 检查防火墙
+
+**Ubuntu/Debian**:
+```bash
+sudo ufw status
+sudo ufw allow 3000/tcp
+sudo ufw status
+```
+
+**CentOS/RHEL**:
+```bash
+sudo firewall-cmd --list-ports
+sudo firewall-cmd --permanent --add-port=3000/tcp
+sudo firewall-cmd --reload
+sudo firewall-cmd --list-ports
+```
+
+### 查看日志
+```bash
+pm2 logs claw3d --lines 50
+```
+
+### 查看 .env 配置
+```bash
+cat ~/claw3d/.env | grep -E "^(HOST|PORT)"
+```
+
+## 完整的诊断和修复流程
+
+```bash
+# 1. 检查当前状态
+echo "=== PM2 状态 ==="
+pm2 list
+
+echo ""
+echo "=== 当前监听地址 ==="
+netstat -tulpn | grep 3000
+
+echo ""
+echo "=== .env 配置 ==="
+cat ~/claw3d/.env | grep -E "^(HOST|PORT)"
+
+# 2. 修复配置
+cd ~/claw3d
+sed -i '/^HOST=/d' .env
+sed -i '/^# *HOST=/d' .env
+sed -i '/^PORT=/d' .env
+sed -i '/^# *PORT=/d' .env
+sed -i '1i HOST=0.0.0.0\nPORT=3000' .env
+
+# 3. 重启服务
+pm2 restart claw3d
+sleep 3
+
+# 4. 验证结果
+echo ""
+echo "=== 新的监听地址 ==="
+netstat -tulpn | grep 3000
+
+echo ""
+echo "=== 测试本地访问 ==="
+curl -I http://localhost:3000
+
+echo ""
+echo "=== 访问地址 ==="
+echo "http://$(hostname -I | awk '{print $1}'):3000"
+
+# 5. 开放防火墙（如果需要）
+sudo ufw allow 3000/tcp 2>/dev/null || sudo firewall-cmd --permanent --add-port=3000/tcp && sudo firewall-cmd --reload
+```
+
+## 成功标志
+
+当你看到以下内容时，说明修复成功：
+
+1. ✅ `netstat -tulpn | grep 3000` 显示 `0.0.0.0:3000`
+2. ✅ `curl http://localhost:3000` 返回 200 或 HTML
+3. ✅ 从其他设备可以访问 `http://192.168.0.132:3000`
+4. ✅ 浏览器可以打开页面并看到 Claw3D 界面
+
+## 常见错误
+
+### 错误 1: 修改后仍然是 127.0.0.1
+**原因**: .env 文件有多个 HOST 配置，或者有其他地方覆盖了配置
+
+**解决**:
+```bash
+cd ~/claw3d
+# 查看所有 HOST 配置
+grep -n "HOST" .env
+
+# 删除所有 HOST 行
+sed -i '/HOST/d' .env
+
+# 添加正确的配置
+echo "HOST=0.0.0.0" >> .env
+echo "PORT=3000" >> .env
+
+# 重启
+pm2 restart claw3d
+```
+
+### 错误 2: 连接被拒绝 (Connection refused)
+**原因**: 防火墙阻止
+
+**解决**:
+```bash
+sudo ufw allow 3000/tcp
+```
+
+### 错误 3: 服务启动失败
+**原因**: 端口被占用或配置错误
+
+**解决**:
+```bash
+# 查看日志
+pm2 logs claw3d --err --lines 50
+
+# 检查端口占用
+netstat -tulpn | grep 3000
+
+# 完全重启
+pm2 delete claw3d
+cd ~/claw3d
+pm2 start npm --name "claw3d" -- start
+```
+
+## 快速命令参考
+
+```bash
+# 查看监听地址
+netstat -tulpn | grep 3000
+
+# 查看 .env 配置
+cat ~/claw3d/.env | grep HOST
+
+# 重启服务
+pm2 restart claw3d
+
+# 查看日志
+pm2 logs claw3d
+
+# 测试访问
+curl http://localhost:3000
+
+# 开放防火墙
+sudo ufw allow 3000/tcp
+```

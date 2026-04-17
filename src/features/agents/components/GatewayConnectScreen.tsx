@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Check, Copy, Eye, EyeOff } from "lucide-react";
+import { Check, Copy, Eye, EyeOff, X } from "lucide-react";
 import type { GatewayStatus } from "@/lib/gateway/GatewayClient";
 import { isLocalGatewayUrl } from "@/lib/gateway/local-gateway";
 import type { StudioGatewayAdapterType, StudioGatewaySettings } from "@/lib/studio/settings";
@@ -19,6 +19,7 @@ type GatewayConnectScreenProps = {
   onAdapterTypeChange: (value: StudioGatewayAdapterType) => void;
   onUseLocalDefaults: () => void;
   onConnect: () => void;
+  onClose?: () => void;
 };
 
 const resolveLocalGatewayPort = (gatewayUrl: string): number => {
@@ -44,6 +45,7 @@ export const GatewayConnectScreen = ({
   onAdapterTypeChange,
   onUseLocalDefaults,
   onConnect,
+  onClose,
 }: GatewayConnectScreenProps) => {
   const [copyStatus, setCopyStatus] = useState<"idle" | "copied" | "failed">("idle");
   const [showToken, setShowToken] = useState(false);
@@ -216,6 +218,19 @@ export const GatewayConnectScreen = ({
 
   return (
     <div className="mx-auto flex min-h-0 w-full max-w-[820px] flex-1 flex-col gap-5">
+      {onClose && (
+        <div className="flex justify-end">
+          <button
+            type="button"
+            className="ui-btn-icon h-8 w-8 rounded-full border border-amber-900/40 bg-[#1a1008]/80 text-amber-100/70 hover:bg-[#2a1810] hover:text-amber-100"
+            onClick={onClose}
+            aria-label="Close connection dialog"
+            title="Close"
+          >
+            <X className="h-4 w-4" />
+          </button>
+        </div>
+      )}
       <div className="ui-card px-4 py-2">
         <div className="flex items-center gap-2">
           {status === "connecting" ? (
