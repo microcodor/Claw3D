@@ -1,0 +1,88 @@
+/* 人群画像组件样式 - 数据大屏优化（固定高度） */
+
+.container {
+  background: rgba(14, 10, 4, 0.7);
+  border: 1px solid rgba(255, 149, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: bold;
+  color: #ff9500;
+  margin: 0;
+}
+
+.badge {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 9px;
+  font-weight: 500;
+}
+
+/* 网格布局 - 改为单列 */
+.grid {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.grid::-webkit-scrollbar {
+  width: 3px;
+}
+
+.grid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+}
+
+.grid::-webkit-scrollbar-thumb {
+  background: rgba(255, 149, 0, 0.3);
+  border-radius: 2px;
+}
+
+.chartBox {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  height: 180px;
+}
+
+.chartTitle {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 4px 0;
+  flex-shrink: 0;
+}
+
+.chart {
+  flex: 1;
+  min-height: 0;
+}

@@ -4232,21 +4232,9 @@ export function OfficeScreen({
     setShowDelayedGatewayConnectOverlay(false);
   }, [agentsLoaded, didAttemptGatewayConnect, shouldPromptForConnect, status]);
 
-  const showGatewayLoadingOverlay =
-    !agentsLoaded &&
-    (!connectPromptReady ||
-      (gatewayUrl.trim().length > 0 &&
-        !shouldPromptForConnect &&
-        ((!didAttemptGatewayConnect && showDelayedGatewayLoadingOverlay) ||
-          (status === "connecting" && showDelayedGatewayLoadingOverlay))));
+  const showGatewayLoadingOverlay = false; // 禁用自动加载覆盖层
   
-  const showGatewayConnectOverlay =
-    manualConnectDialogOpen ||
-    (connectPromptReady &&
-      status === "disconnected" &&
-      !agentsLoaded &&
-      didAttemptGatewayConnect &&
-      (shouldPromptForConnect || showDelayedGatewayConnectOverlay));
+  const showGatewayConnectOverlay = manualConnectDialogOpen; // 只在手动点击时显示
 
   const runningCount = state.agents.filter(
     (agent) =>

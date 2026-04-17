@@ -1,0 +1,46 @@
+/* Toast 容器 */
+.container {
+  position: fixed;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.container > * {
+  pointer-events: auto;
+}
+
+/* 位置变体 */
+.topLeft {
+  top: 20px;
+  left: 20px;
+}
+
+.topCenter {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.topRight {
+  top: 20px;
+  right: 20px;
+}
+
+.bottomLeft {
+  bottom: 20px;
+  left: 20px;
+}
+
+.bottomCenter {
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottomRight {
+  bottom: 20px;
+  right: 20px;
+}

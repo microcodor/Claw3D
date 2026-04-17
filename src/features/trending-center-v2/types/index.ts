@@ -20,6 +20,11 @@ export interface PlatformStats {
   category: string;
   count: number;
   trend: number; // -100 to +100
+  // 新增多维度数据
+  interactionIndex: number; // 互动指数 0-100
+  peakHour: string; // 峰值时段 "12:00-14:00"
+  userGrowth: number; // 用户增长数
+  contentCount: number; // 内容数量
 }
 
 export interface CommonHotspot {
@@ -149,6 +154,7 @@ export interface Alert {
   };
   suggestion: string;
   timestamp: string;
+  trendingItem?: TrendingItem; // 关联的热搜内容
 }
 
 // ============================================================

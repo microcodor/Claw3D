@@ -25,6 +25,13 @@ export const MOCK_PLATFORMS: Platform[] = [
   { id: 'xiaohongshu', name: 'xiaohongshu', displayName: '小红书', color: '#ff2d55', icon: '📖', category: '社区' },
 ];
 
+// 峰值时段列表
+const PEAK_HOURS = [
+  '08:00-10:00', '10:00-12:00', '12:00-14:00', 
+  '14:00-16:00', '16:00-18:00', '18:00-20:00', 
+  '20:00-22:00', '22:00-24:00'
+];
+
 // 类别列表
 const CATEGORIES = ['科技', '娱乐', '社会', '体育', '财经', '游戏', '教育', '健康'];
 

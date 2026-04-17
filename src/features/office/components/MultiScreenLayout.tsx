@@ -10,7 +10,9 @@ import styles from './multi-screen-layout.module.css';
 
 // Lazy load SCR-02 and SCR-03 to minimize performance impact
 const TrendingCenter = lazy(() => import('@/features/trending-center/screens/TrendingCenterScreen'));
+const TrendingCenterV2 = lazy(() => import('@/features/trending-center-v2/screens/TrendingCenterScreenV2'));
 const CreationStudio = lazy(() => import('@/features/creation-studio/screens/CreationStudioScreen'));
+const CreationStudioV2 = lazy(() => import('@/features/creation-studio-v2/screens/CreationStudioScreenV2'));
 
 interface MultiScreenLayoutProps {
   officeScreen: ReactNode;
@@ -57,13 +59,18 @@ export function MultiScreenLayout({ officeScreen }: MultiScreenLayoutProps) {
   const isVertical = layoutDirection === 'column';
   const isSingleMode = screenMode === 'single';
   
+  // Always use V2 for trending center (data dashboard)
+  const getTrendingComponent = () => {
+    return <Suspense fallback={<LoadingFallback />}><TrendingCenterV2 /></Suspense>;
+  };
+  
   // Determine which screens to render
   const screens = isSingleMode
     ? [{ id: activeScreen, component: getScreenComponent(activeScreen, officeScreen) }]
     : [
         { id: 'office', component: officeScreen },
-        { id: 'trending', component: <Suspense fallback={<LoadingFallback />}><TrendingCenter /></Suspense> },
-        { id: 'creation', component: <Suspense fallback={<LoadingFallback />}><CreationStudio /></Suspense> },
+        { id: 'trending', component: getTrendingComponent() },
+        { id: 'creation', component: <Suspense fallback={<LoadingFallback />}><CreationStudioV2 /></Suspense> },
       ];
   
   const getStatusColor = () => {
@@ -147,9 +154,9 @@ function getScreenComponent(screenId: string, officeScreen: ReactNode): ReactNod
     case 'office':
       return officeScreen;
     case 'trending':
-      return <Suspense fallback={<LoadingFallback />}><TrendingCenter /></Suspense>;
+      return <Suspense fallback={<LoadingFallback />}><TrendingCenterV2 /></Suspense>;
     case 'creation':
-      return <Suspense fallback={<LoadingFallback />}><CreationStudio /></Suspense>;
+      return <Suspense fallback={<LoadingFallback />}><CreationStudioV2 /></Suspense>;
     default:
       return officeScreen;
   }

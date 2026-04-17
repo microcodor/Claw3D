@@ -1,0 +1,300 @@
+/* 舆情监测与智能预警组件样式 - 顶部横版 + 下方左右两列 */
+
+.container {
+  background: rgba(14, 10, 4, 0.7);
+  border: 1px solid rgba(255, 149, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: bold;
+  color: #ff9500;
+  margin: 0;
+}
+
+.riskBadge {
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+/* 内容区域 - 垂直布局 */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* 顶部：舆论态势 */
+.sentimentSection {
+  flex-shrink: 0;
+}
+
+.sectionTitle {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 6px 0;
+}
+
+/* 情感分布条 - 横版 */
+.sentimentBar {
+  display: flex;
+  height: 32px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.positive,
+.neutral,
+.negative {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.positive {
+  background: linear-gradient(90deg, rgba(74, 222, 128, 0.4), rgba(74, 222, 128, 0.2));
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neutral {
+  background: linear-gradient(90deg, rgba(156, 163, 175, 0.4), rgba(156, 163, 175, 0.2));
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.negative {
+  background: linear-gradient(90deg, rgba(248, 113, 113, 0.4), rgba(248, 113, 113, 0.2));
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* 下方：单列布局 */
+.singleColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 4px;
+  scroll-behavior: smooth;
+}
+
+.singleColumn::-webkit-scrollbar {
+  width: 3px;
+}
+
+.singleColumn::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+}
+
+.singleColumn::-webkit-scrollbar-thumb {
+  background: rgba(255, 149, 0, 0.3);
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+
+.singleColumn::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 149, 0, 0.5);
+}
+
+.alertSection {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.columnTitle {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.icon {
+  font-size: 12px;
+}
+
+.alertList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.alertItem {
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid;
+  font-size: 9px;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.alertItem:hover {
+  transform: translateX(2px);
+}
+
+.alertRisk {
+  background: rgba(220, 38, 38, 0.1);
+  border-color: rgba(220, 38, 38, 0.3);
+}
+
+.alertRisk:hover {
+  background: rgba(220, 38, 38, 0.15);
+  border-color: rgba(220, 38, 38, 0.4);
+}
+
+.alertOpportunity {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.alertOpportunity:hover {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.alertHeader {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.levelBadge {
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-size: 8px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.alertTopic {
+  font-weight: 600;
+  color: #fff;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.alertReason {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 3px;
+  line-height: 1.4;
+}
+
+.metrics {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 3px;
+}
+
+.metric {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 8px;
+}
+
+.metricValue {
+  font-weight: 600;
+  color: #f87171;
+}
+
+.metricValuePositive {
+  font-weight: 600;
+  color: #4ade80;
+}
+
+.suggestion {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.suggestionLabel {
+  font-weight: 600;
+  color: #ff9500;
+  margin-right: 3px;
+}
+
+.emptyState {
+  padding: 12px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 4px;
+}
+
+.trendingContent {
+  margin: 4px 0;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 3px;
+  border-left: 2px solid rgba(255, 149, 0, 0.3);
+}
+
+.trendingMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 8px;
+  flex-wrap: wrap;
+}
+
+.trendingPlatform {
+  color: rgba(255, 149, 0, 0.9);
+  font-weight: 600;
+}
+
+.trendingRank {
+  color: rgba(59, 130, 246, 0.9);
+  font-weight: 600;
+}
+
+.trendingHeat {
+  color: rgba(248, 113, 113, 0.9);
+  font-weight: 600;
+}

@@ -9,7 +9,7 @@ interface ScreenConfig {
 
 const SCREENS: ScreenConfig[] = [
   { id: 'office', label: 'SCR-01', name: '数字办公室' },
-  { id: 'trending', label: 'SCR-02', name: '热搜舆情中心' },
+  { id: 'trending', label: 'SCR-02', name: '舆情分析中心' },
   { id: 'creation', label: 'SCR-03', name: '创作工作室' },
 ];
 

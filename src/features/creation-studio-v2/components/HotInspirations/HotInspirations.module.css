@@ -1,0 +1,230 @@
+/* 热点灵感样式 */
+
+.container {
+  background: rgba(14, 10, 4, 0.7);
+  border: 1px solid rgba(255, 149, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ff9500;
+  margin: 0;
+}
+
+.badge {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* 类型选择器 */
+.typeSelector {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+  flex-shrink: 0;
+}
+
+.typeBtn {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid;
+  border-radius: 6px;
+  padding: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.typeBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: scale(1.05);
+}
+
+.typeBtn.active {
+  background: rgba(255, 255, 255, 0.08);
+  transform: scale(1.05);
+}
+
+.content {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.loading,
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.loadingIcon,
+.emptyIcon {
+  font-size: 32px;
+  margin-bottom: 8px;
+  opacity: 0.5;
+}
+
+.loadingIcon {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.loadingText,
+.emptyText {
+  font-size: 11px;
+}
+
+.topicList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 4px;
+}
+
+.topicList::-webkit-scrollbar {
+  width: 3px;
+}
+
+.topicList::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+}
+
+.topicList::-webkit-scrollbar-thumb {
+  background: rgba(255, 149, 0, 0.3);
+  border-radius: 2px;
+}
+
+.topicItem {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.topicItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 149, 0, 0.3);
+  transform: translateX(2px);
+}
+
+.topicItem:hover .actionIcon {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.topicRank {
+  flex-shrink: 0;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topRank {
+  font-size: 14px;
+}
+
+.normalRank {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.topicContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.topicTitle {
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 3px;
+}
+
+.topicMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 9px;
+}
+
+.topicPlatform {
+  color: rgba(59, 130, 246, 0.9);
+  background: rgba(59, 130, 246, 0.1);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.topicHeat {
+  color: rgba(239, 68, 68, 0.9);
+  font-weight: 600;
+}
+
+.topicAction {
+  flex-shrink: 0;
+}
+
+.actionIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 149, 0, 0.1);
+  border: 1px solid rgba(255, 149, 0, 0.3);
+  border-radius: 4px;
+  color: #ff9500;
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}

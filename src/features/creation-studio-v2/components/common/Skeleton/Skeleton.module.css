@@ -1,0 +1,75 @@
+/* 骨架屏基础样式 */
+.skeleton {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 变体样式 */
+.text {
+  border-radius: 4px;
+  transform: scale(1, 0.8);
+}
+
+.rect {
+  border-radius: 6px;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+/* 动画样式 */
+.pulse {
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+.wave {
+  animation: skeleton-wave 1.5s linear infinite;
+}
+
+.wave::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  animation: skeleton-wave-shimmer 1.5s linear infinite;
+}
+
+/* 动画关键帧 */
+@keyframes skeleton-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes skeleton-wave {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+@keyframes skeleton-wave-shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

@@ -1,0 +1,165 @@
+/* 预警系统组件样式 - 数据大屏优化（固定高度） */
+
+.container {
+  background: rgba(14, 10, 4, 0.7);
+  border: 1px solid rgba(255, 149, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: bold;
+  color: #ff9500;
+  margin: 0;
+}
+
+.badge {
+  background: rgba(220, 38, 38, 0.2);
+  color: #dc2626;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+/* 内容区域 */
+.content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 4px;
+}
+
+.content::-webkit-scrollbar {
+  width: 3px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: rgba(255, 149, 0, 0.3);
+  border-radius: 2px;
+}
+
+/* 分组 */
+.section {
+  margin-bottom: 10px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon {
+  font-size: 12px;
+}
+
+/* 预警列表 */
+.alertList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.alertItem {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid;
+}
+
+.alertRisk {
+  background: rgba(220, 38, 38, 0.1);
+  border-color: rgba(220, 38, 38, 0.3);
+}
+
+.alertOpportunity {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.alertHeader {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.levelBadge {
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.alertTopic {
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  flex: 1;
+}
+
+.alertReason {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 4px;
+}
+
+.metric {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 2px;
+}
+
+.metricValue {
+  font-weight: 600;
+  color: #f87171;
+}
+
+.metricValuePositive {
+  font-weight: 600;
+  color: #4ade80;
+}
+
+.suggestion {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.suggestionLabel {
+  font-weight: 600;
+  color: #ff9500;
+  margin-right: 4px;
+}

@@ -1,0 +1,329 @@
+/* 全平台对比组件样式 - 数据大屏优化（固定高度） */
+
+.container {
+  background: rgba(14, 10, 4, 0.7);
+  border: 1px solid rgba(255, 149, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: bold;
+  color: #ff9500;
+  margin: 0;
+}
+
+.badge {
+  background: rgba(255, 149, 0, 0.2);
+  color: #ff9500;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 9px;
+  font-weight: 500;
+}
+
+/* 内容区域 - 左右布局 */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* 平台热度区域 */
+.platformSection {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.platformList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: auto;
+  padding-right: 4px;
+  flex: 1;
+  min-height: 0;
+}
+
+.platformList::-webkit-scrollbar {
+  width: 3px;
+}
+
+.platformList::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+}
+
+.platformList::-webkit-scrollbar-thumb {
+  background: rgba(255, 149, 0, 0.3);
+  border-radius: 2px;
+}
+
+.platformItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex-shrink: 0;
+}
+
+.platformInfo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.platformIcon {
+  font-size: 12px;
+}
+
+.platformName {
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* 热度条 */
+.heatBar {
+  position: relative;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.heatFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.3s ease;
+}
+
+.heatPercent {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 9px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+}
+
+/* 平台元数据 */
+.platformMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 9px;
+}
+
+.count {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.trend {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.trendUp {
+  color: #4ade80;
+}
+
+.trendDown {
+  color: #f87171;
+}
+
+/* 实时热搜榜区域 */
+.trendingSection {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  border-left: 1px solid rgba(255, 149, 0, 0.2);
+  padding-left: 10px;
+  overflow: hidden;
+}
+
+.sectionTitle {
+  font-size: 11px;
+  font-weight: 600;
+  color: #ff9500;
+  margin: 0 0 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.fireIcon {
+  font-size: 12px;
+}
+
+.trendingList {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-right: 4px;
+  min-height: 0;
+}
+
+.trendingList::-webkit-scrollbar {
+  width: 3px;
+}
+
+.trendingList::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+}
+
+.trendingList::-webkit-scrollbar-thumb {
+  background: rgba(255, 149, 0, 0.3);
+  border-radius: 2px;
+}
+
+.trendingItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 5px 6px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.trendingItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 149, 0, 0.3);
+}
+
+.rank {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.rankTop {
+  background: linear-gradient(135deg, #ff9500, #ff6b35);
+  color: #fff;
+}
+
+.trendingContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.trendingTitle {
+  font-size: 10px;
+  color: #fff;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.trendingMeta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 8px;
+}
+
+.platform {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.heat {
+  color: #ff9500;
+  font-weight: 600;
+}
+
+.delta {
+  font-weight: 600;
+}
+
+.deltaUp {
+  color: #4ade80;
+}
+
+.deltaDown {
+  color: #f87171;
+}
+
+/* 共同热点 */
+.commonSection {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 149, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.commonList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.commonItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 6px;
+  background: rgba(255, 149, 0, 0.1);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 149, 0, 0.2);
+}
+
+.commonTopic {
+  font-size: 9px;
+  color: #fff;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.commonCount {
+  font-size: 8px;
+  color: #ff9500;
+  font-weight: 600;
+}
