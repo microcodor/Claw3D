@@ -1,0 +1,1163 @@
+
+> claw3d@0.1.5 dev
+> node server/index.js --dev
+
+Open in browser: http://localhost:3000
+○ Compiling / ...
+ GET / 307 in 4.7s (compile: 4.4s, render: 256ms)
+○ Compiling /office ...
+ GET /office 200 in 14.2s (compile: 12.2s, render: 1922ms)
+○ Compiling /api/office/layout ...
+ GET /api/studio 200 in 5.6s (compile: 5.5s, render: 113ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 5.7s (compile: 5.6s, render: 111ms)
+ GET /api/office/standup/meeting 200 in 5.7s (compile: 5.5s, render: 110ms)
+ GET /api/studio 200 in 5.7s (compile: 5.6s, render: 109ms)
+ PUT /api/office/layout 200 in 4.8s (compile: 4.6s, render: 121ms)
+proxy connected
+proxy connected
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=false hasDevice=true
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=false hasDevice=false
+Upstream gateway WebSocket error. Error: WebSocket was closed before the connection was established
+    at Timeout.<anonymous> (server/gateway-proxy.js:306:23)
+[gateway-proxy] upstream closed code=1006 reason=(none) hadConnect=true responseSent=true
+[gateway-proxy] browser disconnected
+[gateway-proxy] browser disconnected
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 1525ms (compile: 687ms, render: 838ms)
+ GET /api/office/standup/meeting 200 in 1442ms (compile: 1248ms, render: 195ms)
+[gateway-proxy] upstream closed code=1008 reason=unauthorized: gateway token missing (open the dashboard URL and paste the token in Control UI settings) hadConnect=true responseSent=true
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 4.2s (compile: 1879ms, render: 2.3s)
+ GET /api/office/standup/meeting 200 in 10.4s (compile: 10.3s, render: 119ms)
+ PUT /api/studio 200 in 162ms (compile: 118ms, render: 44ms)
+proxy connected
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ GET /api/studio 200 in 66ms (compile: 32ms, render: 34ms)
+ PUT /api/studio 200 in 16ms (compile: 3ms, render: 12ms)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+ GET /office 200 in 4.8s (compile: 1206ms, render: 3.6s)
+ GET /api/studio 200 in 47ms (compile: 18ms, render: 29ms)
+ GET /api/studio 200 in 39ms (compile: 10ms, render: 29ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 54ms (compile: 47ms, render: 7ms)
+ GET /api/office/standup/meeting 200 in 58ms (compile: 54ms, render: 5ms)
+ PUT /api/studio 200 in 59ms (compile: 8ms, render: 51ms)
+proxy connected
+ PUT /api/studio 200 in 8ms (compile: 3ms, render: 6ms)
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=false
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1008 reason=invalid connect params: at /device: must have required property 'nonce' hadConnect=true responseSent=true
+ GET /office 200 in 395ms (compile: 43ms, render: 352ms)
+ GET /api/studio 200 in 65ms (compile: 23ms, render: 42ms)
+ GET /api/studio 200 in 62ms (compile: 21ms, render: 42ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 103ms (compile: 91ms, render: 12ms)
+ GET /api/office/standup/meeting 200 in 111ms (compile: 104ms, render: 7ms)
+ PUT /api/studio 200 in 19ms (compile: 3ms, render: 16ms)
+proxy connected
+ PUT /api/studio 200 in 11ms (compile: 1943µs, render: 9ms)
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ PUT /api/studio 200 in 16ms (compile: 6ms, render: 10ms)
+ GET /office 200 in 927ms (compile: 210ms, render: 717ms)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 45ms (compile: 17ms, render: 28ms)
+ GET /api/studio 200 in 81ms (compile: 65ms, render: 16ms)
+ GET /api/studio 200 in 70ms (compile: 54ms, render: 16ms)
+ GET /api/office/standup/meeting 200 in 95ms (compile: 75ms, render: 20ms)
+ PUT /api/studio 200 in 17ms (compile: 2ms, render: 15ms)
+proxy connected
+ PUT /api/studio 200 in 54ms (compile: 5ms, render: 50ms)
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=false
+ GET /api/studio 200 in 18ms (compile: 6ms, render: 12ms)
+ GET /api/office/standup/meeting 200 in 35ms (compile: 19ms, render: 16ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 50ms (compile: 38ms, render: 12ms)
+ PUT /api/studio 200 in 18ms (compile: 6ms, render: 12ms)
+ PUT /api/office/layout 200 in 70ms (compile: 13ms, render: 57ms)
+proxy connected
+ PUT /api/studio 200 in 18ms (compile: 2ms, render: 16ms)
+[gateway-proxy] upstream closed code=1008 reason=invalid connect params: at /device: must have required property 'nonce' hadConnect=true responseSent=true
+[gateway-proxy] browser disconnected
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ GET /api/studio 200 in 29ms (compile: 9ms, render: 20ms)
+ PUT /api/studio 200 in 43ms (compile: 5ms, render: 37ms)
+ GET /api/studio 200 in 212ms (compile: 86ms, render: 126ms)
+ GET /api/studio 200 in 237ms (compile: 101ms, render: 136ms)
+ GET /api/studio 200 in 96ms (compile: 24ms, render: 71ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 168ms (compile: 127ms, render: 41ms)
+ GET /api/office/standup/meeting 200 in 263ms (compile: 207ms, render: 56ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 175ms (compile: 73ms, render: 103ms)
+ GET /api/office/standup/meeting 200 in 194ms (compile: 147ms, render: 48ms)
+ GET /api/studio 200 in 301ms (compile: 255ms, render: 46ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 92ms (compile: 12ms, render: 80ms)
+ GET /api/office/standup/meeting 200 in 113ms (compile: 94ms, render: 18ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 66ms (compile: 27ms, render: 39ms)
+ GET /api/office/standup/meeting 200 in 76ms (compile: 57ms, render: 19ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 148ms (compile: 65ms, render: 83ms)
+ GET /api/office/standup/meeting 200 in 145ms (compile: 138ms, render: 6ms)
+ GET /api/studio 200 in 146ms (compile: 139ms, render: 6ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 209ms (compile: 104ms, render: 104ms)
+ GET /api/office/standup/meeting 200 in 212ms (compile: 204ms, render: 9ms)
+ GET /api/studio 200 in 243ms (compile: 208ms, render: 35ms)
+ GET /office 200 in 338ms (compile: 31ms, render: 308ms)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+ GET /office 200 in 991ms (compile: 180ms, render: 810ms)
+ GET /office 200 in 840ms (compile: 184ms, render: 655ms)
+ GET /office 200 in 1295ms (compile: 300ms, render: 995ms)
+ GET /office 200 in 345ms (compile: 81ms, render: 264ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 566ms (compile: 172ms, render: 394ms)
+ GET /api/studio 200 in 812ms (compile: 703ms, render: 110ms)
+ GET /api/studio 200 in 613ms (compile: 503ms, render: 110ms)
+ GET /api/office/standup/meeting 200 in 710ms (compile: 682ms, render: 28ms)
+ PUT /api/office/layout 200 in 159ms (compile: 18ms, render: 141ms)
+ PUT /api/studio 200 in 52ms (compile: 7ms, render: 44ms)
+ PUT /api/studio 200 in 50ms (compile: 6ms, render: 44ms)
+proxy connected
+proxy connected
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ PUT /api/studio 200 in 33ms (compile: 8ms, render: 25ms)
+ PUT /api/studio 200 in 30ms (compile: 5ms, render: 25ms)
+ GET /api/studio 200 in 16ms (compile: 3ms, render: 13ms)
+ PUT /api/studio 200 in 9ms (compile: 3ms, render: 6ms)
+ PUT /api/studio 200 in 13ms (compile: 1313µs, render: 12ms)
+ GET /api/studio 200 in 69ms (compile: 31ms, render: 38ms)
+ GET /office 200 in 516ms (compile: 34ms, render: 482ms)
+[gateway-proxy] browser disconnected
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+ GET /office 200 in 541ms (compile: 142ms, render: 398ms)
+ GET /office 200 in 1065ms (compile: 226ms, render: 840ms)
+ GET /office 200 in 894ms (compile: 221ms, render: 673ms)
+ GET /api/studio 200 in 736ms (compile: 263ms, render: 472ms)
+ GET /api/studio 200 in 593ms (compile: 127ms, render: 466ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 661ms (compile: 636ms, render: 25ms)
+ GET /api/office/standup/meeting 200 in 679ms (compile: 648ms, render: 31ms)
+ PUT /api/office/layout 200 in 169ms (compile: 27ms, render: 141ms)
+ PUT /api/studio 200 in 44ms (compile: 7ms, render: 36ms)
+ PUT /api/studio 200 in 42ms (compile: 6ms, render: 36ms)
+proxy connected
+ PUT /api/studio 200 in 86ms (compile: 5ms, render: 80ms)
+ PUT /api/studio 200 in 85ms (compile: 5ms, render: 80ms)
+proxy connected
+ GET /office 200 in 389ms (compile: 8ms, render: 381ms)
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=false
+[gateway-proxy] browser disconnected
+Upstream gateway WebSocket error. Error: WebSocket was closed before the connection was established
+    at closeBoth (server/gateway-proxy.js:198:21)
+    at WebSocket.<anonymous> (server/gateway-proxy.js:477:7)
+[gateway-proxy] upstream closed code=1006 reason=(none) hadConnect=true responseSent=true
+[gateway-proxy] browser disconnected
+Upstream gateway WebSocket error. Error: WebSocket was closed before the connection was established
+    at closeBoth (server/gateway-proxy.js:198:21)
+    at WebSocket.<anonymous> (server/gateway-proxy.js:477:7)
+[gateway-proxy] upstream closed code=1006 reason=(none) hadConnect=false responseSent=false
+ GET /api/studio 200 in 584ms (compile: 317ms, render: 267ms)
+ GET /api/studio 200 in 562ms (compile: 294ms, render: 268ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 674ms (compile: 646ms, render: 28ms)
+ GET /api/office/standup/meeting 200 in 701ms (compile: 681ms, render: 19ms)
+ PUT /api/office/layout 200 in 62ms (compile: 19ms, render: 43ms)
+ PUT /api/studio 200 in 37ms (compile: 11ms, render: 26ms)
+ PUT /api/studio 200 in 60ms (compile: 13ms, render: 48ms)
+ PUT /api/studio 200 in 44ms (compile: 14ms, render: 30ms)
+ PUT /api/studio 200 in 20ms (compile: 13ms, render: 8ms)
+proxy connected
+proxy connected
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ GET /api/studio 200 in 18ms (compile: 5ms, render: 13ms)
+ PUT /api/studio 200 in 22ms (compile: 10ms, render: 12ms)
+ PUT /api/studio 200 in 21ms (compile: 5ms, render: 15ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 96ms (compile: 61ms, render: 35ms)
+ GET /api/office/standup/meeting 200 in 81ms (compile: 65ms, render: 16ms)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+
+[2m[285.61ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[  0.04ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 32.06ms][22m  [2m ↳ [22mSetup compiler
+[2m[  0.63ms][22m    [2m ↳ [22mPostCSS AST -> Tailwind CSS AST
+[2m[ 31.40ms][22m    [2m ↳ [22mCreate compiler
+[2m[  0.09ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[  9.24ms][22m  [2m ↳ [22mSetup scanner
+[2m[123.90ms][22m  [2m ↳ [22mScan for candidates
+[2m[ 36.56ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 73.18ms][22m  [2m ↳ [22mBuild utilities
+[2m[  6.50ms][22m  [2m ↳ [22mTransform Tailwind CSS AST into PostCSS AST
+[2m[  3.66ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[36.44ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.01ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.16ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[16.83ms][22m  [2m ↳ [22mScan for candidates
+[2m[12.43ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 2.49ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 4.10ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[72.41ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.02ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.09ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[19.05ms][22m  [2m ↳ [22mScan for candidates
+[2m[13.38ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[25.01ms][22m  [2m ↳ [22mBuild utilities
+[2m[14.69ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[29.18ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.00ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.05ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[13.37ms][22m  [2m ↳ [22mScan for candidates
+[2m[11.70ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 1.66ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 2.35ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[86.29ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.03ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.10ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[25.76ms][22m  [2m ↳ [22mScan for candidates
+[2m[43.01ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 4.14ms][22m  [2m ↳ [22mBuild utilities
+[2m[13.06ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[140.28ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[  0.01ms][22m  [2m ↳ [22mQuick bail check
+[2m[  0.16ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[ 36.77ms][22m  [2m ↳ [22mScan for candidates
+[2m[ 92.54ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[  3.82ms][22m  [2m ↳ [22mBuild utilities
+[2m[  6.80ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+○ Compiling /office ...
+ GET /office 200 in 7.6s (compile: 4.5s, render: 3.1s)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+ GET /api/studio 200 in 1638ms (compile: 1600ms, render: 37ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 1639ms (compile: 1602ms, render: 37ms)
+ GET /api/office/standup/meeting 200 in 1638ms (compile: 1601ms, render: 37ms)
+ GET /api/studio 200 in 1644ms (compile: 1607ms, render: 37ms)
+ PUT /api/studio 200 in 8ms (compile: 1816µs, render: 6ms)
+proxy connected
+ PUT /api/studio 200 in 8ms (compile: 3ms, render: 6ms)
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ PUT /api/studio 200 in 20ms (compile: 8ms, render: 12ms)
+ GET /office 200 in 1246ms (compile: 749ms, render: 498ms)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+ GET /api/studio 200 in 26ms (compile: 4ms, render: 22ms)
+ GET /api/studio 200 in 24ms (compile: 2ms, render: 22ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 30ms (compile: 27ms, render: 4ms)
+ GET /api/office/standup/meeting 200 in 33ms (compile: 31ms, render: 2ms)
+ PUT /api/studio 200 in 6ms (compile: 1178µs, render: 5ms)
+proxy connected
+ PUT /api/studio 200 in 9ms (compile: 3ms, render: 6ms)
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ PUT /api/studio 200 in 16ms (compile: 5ms, render: 11ms)
+
+[2m[113.95ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[  0.08ms][22m  [2m ↳ [22mQuick bail check
+[2m[  0.26ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[ 80.34ms][22m  [2m ↳ [22mScan for candidates
+[2m[ 16.96ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[  7.55ms][22m  [2m ↳ [22mBuild utilities
+[2m[  7.69ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[71.18ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.01ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.06ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[30.49ms][22m  [2m ↳ [22mScan for candidates
+[2m[28.04ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 1.82ms][22m  [2m ↳ [22mBuild utilities
+[2m[10.21ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+ GET /office 200 in 5.1s (compile: 3.5s, render: 1633ms)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+ GET /api/studio 200 in 1443ms (compile: 1410ms, render: 34ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 1446ms (compile: 1412ms, render: 34ms)
+ GET /api/office/standup/meeting 200 in 1444ms (compile: 1411ms, render: 34ms)
+ GET /api/studio 200 in 1472ms (compile: 1438ms, render: 34ms)
+ PUT /api/studio 200 in 8ms (compile: 2ms, render: 5ms)
+proxy connected
+ PUT /api/studio 200 in 9ms (compile: 4ms, render: 5ms)
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ PUT /api/studio 200 in 27ms (compile: 12ms, render: 15ms)
+
+[2m[264.88ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[  0.03ms][22m  [2m ↳ [22mQuick bail check
+[2m[  1.84ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[218.51ms][22m  [2m ↳ [22mScan for candidates
+[2m[ 11.37ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 22.54ms][22m  [2m ↳ [22mBuild utilities
+[2m[  9.23ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[36.22ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.00ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.09ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[19.75ms][22m  [2m ↳ [22mScan for candidates
+[2m[12.64ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 1.50ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 2.16ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[70.24ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.01ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.07ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[30.67ms][22m  [2m ↳ [22mScan for candidates
+[2m[16.12ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[18.81ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 4.38ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[27.70ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.00ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.03ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[12.95ms][22m  [2m ↳ [22mScan for candidates
+[2m[11.47ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 1.29ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 1.89ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[186.51ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[  0.04ms][22m  [2m ↳ [22mQuick bail check
+[2m[  1.23ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[132.29ms][22m  [2m ↳ [22mScan for candidates
+[2m[ 11.76ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 20.10ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 20.17ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[42.70ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.00ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.06ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[20.21ms][22m  [2m ↳ [22mScan for candidates
+[2m[14.34ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 2.75ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 5.25ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[84.01ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.02ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.22ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[29.89ms][22m  [2m ↳ [22mScan for candidates
+[2m[23.26ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[14.84ms][22m  [2m ↳ [22mBuild utilities
+[2m[15.57ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[26.99ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.00ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.03ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[12.91ms][22m  [2m ↳ [22mScan for candidates
+[2m[10.90ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 1.32ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 1.79ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+ GET / 307 in 1513ms (compile: 1377ms, render: 136ms)
+○ Compiling /office ...
+[SCR-03 V2] Generated initial tasks:
+  1. 分析一下AI大模型竞争格局 (video, P5)
+  2. 网络数据泄露事件如何防范 (article, P4)
+  3. 脑机接口技术最新进展 (video, P5)
+  4. 分析一下AI大模型竞争格局 (video, P5)
+  5. 网络数据泄露事件如何防范 (article, P4)
+ GET /office 200 in 8.8s (compile: 7.1s, render: 1611ms)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+ GET /api/studio 200 in 2.1s (compile: 2.1s, render: 23ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 2.1s (compile: 2.1s, render: 23ms)
+ GET /api/office/standup/meeting 200 in 2.1s (compile: 2.1s, render: 23ms)
+ GET /api/studio 200 in 2.1s (compile: 2.1s, render: 23ms)
+ PUT /api/studio 200 in 12ms (compile: 7ms, render: 5ms)
+proxy connected
+ PUT /api/studio 200 in 9ms (compile: 4ms, render: 5ms)
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ PUT /api/studio 200 in 23ms (compile: 9ms, render: 14ms)
+
+[2m[93.11ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.03ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 1.64ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[60.76ms][22m  [2m ↳ [22mScan for candidates
+[2m[16.61ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 9.05ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 4.63ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[38.18ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.00ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.09ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[16.90ms][22m  [2m ↳ [22mScan for candidates
+[2m[16.56ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 1.63ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 2.87ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[46.80ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.01ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.21ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[23.10ms][22m  [2m ↳ [22mScan for candidates
+[2m[11.87ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 4.23ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 7.10ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[34.13ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.00ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.06ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[17.26ms][22m  [2m ↳ [22mScan for candidates
+[2m[12.58ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 1.57ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 2.59ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+[SCR-03 V2] Generated initial tasks:
+  1. 网络数据泄露事件如何防范 (article, P4)
+  2. 脑机接口技术最新进展 (video, P5)
+  3. 分析一下AI大模型竞争格局 (video, P5)
+  4. 网络数据泄露事件如何防范 (article, P4)
+  5. 脑机接口技术最新进展 (video, P5)
+ GET /office 200 in 3.2s (compile: 2.3s, render: 874ms)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+ GET /api/studio 200 in 1669ms (compile: 1647ms, render: 21ms)
+ GET /api/studio 200 in 1666ms (compile: 1644ms, render: 21ms)
+ GET /api/office/standup/meeting 200 in 1666ms (compile: 1645ms, render: 21ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 1666ms (compile: 1645ms, render: 21ms)
+ PUT /api/studio 200 in 6ms (compile: 1278µs, render: 5ms)
+proxy connected
+ PUT /api/studio 200 in 11ms (compile: 4ms, render: 7ms)
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ PUT /api/studio 200 in 27ms (compile: 13ms, render: 14ms)
+
+[2m[75.87ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.01ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 1.72ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[51.42ms][22m  [2m ↳ [22mScan for candidates
+[2m[11.63ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 6.15ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 4.80ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[33.46ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.01ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.17ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[15.64ms][22m  [2m ↳ [22mScan for candidates
+[2m[11.55ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 2.34ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 3.58ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[113.19ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[  0.02ms][22m  [2m ↳ [22mQuick bail check
+[2m[  0.15ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[ 78.37ms][22m  [2m ↳ [22mScan for candidates
+[2m[ 18.77ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[  5.60ms][22m  [2m ↳ [22mBuild utilities
+[2m[  9.95ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[77.64ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.13ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.16ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[28.37ms][22m  [2m ↳ [22mScan for candidates
+[2m[15.90ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 2.97ms][22m  [2m ↳ [22mBuild utilities
+[2m[29.30ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+[SCR-03 V2] Generated initial tasks:
+  1. 网络数据泄露事件如何防范 (article, P4)
+  2. 脑机接口技术最新进展 (video, P5)
+  3. 分析一下AI大模型竞争格局 (video, P5)
+  4. 元宇宙产业发展现状与趋势 (social, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+ GET /office 200 in 4.6s (compile: 3.8s, render: 815ms)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+ GET /api/studio 200 in 1401ms (compile: 1365ms, render: 36ms)
+ GET /api/studio 200 in 1395ms (compile: 1358ms, render: 36ms)
+ GET /api/office/standup/meeting 200 in 1396ms (compile: 1360ms, render: 36ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 1398ms (compile: 1362ms, render: 36ms)
+ PUT /api/studio 200 in 5ms (compile: 1061µs, render: 4ms)
+proxy connected
+ PUT /api/studio 200 in 11ms (compile: 6ms, render: 5ms)
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ PUT /api/studio 200 in 19ms (compile: 10ms, render: 9ms)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+proxy connected
+Upstream gateway WebSocket error. Error: WebSocket was closed before the connection was established
+    at Timeout.<anonymous> (server/gateway-proxy.js:306:23)
+[gateway-proxy] upstream closed code=1006 reason=(none) hadConnect=false responseSent=false
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=false
+[gateway-proxy] browser disconnected
+proxy connected
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=false
+Upstream gateway WebSocket error. Error: WebSocket was closed before the connection was established
+    at Timeout.<anonymous> (server/gateway-proxy.js:306:23)
+[gateway-proxy] upstream closed code=1006 reason=(none) hadConnect=true responseSent=true
+[gateway-proxy] browser disconnected
+proxy connected
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ PUT /api/studio 200 in 67ms (compile: 25ms, render: 42ms)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+proxy connected
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ PUT /api/studio 200 in 174ms (compile: 57ms, render: 117ms)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+proxy connected
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=false
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1008 reason=invalid connect params: at /device: must have required property 'nonce' hadConnect=true responseSent=true
+proxy connected
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ PUT /api/studio 200 in 154ms (compile: 37ms, render: 118ms)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+proxy connected
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=false
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1008 reason=invalid connect params: at /device: must have required property 'nonce' hadConnect=true responseSent=true
+proxy connected
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ PUT /api/studio 200 in 313ms (compile: 117ms, render: 196ms)
+[SCR-03 V2] Generated initial tasks:
+  1. 网络数据泄露事件如何防范 (article, P4)
+  2. 脑机接口技术最新进展 (video, P5)
+  3. 分析一下AI大模型竞争格局 (video, P5)
+  4. 元宇宙产业发展现状与趋势 (social, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+ GET /office 200 in 7.5s (compile: 3.9s, render: 3.5s)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+ GET /api/studio 200 in 926ms (compile: 362ms, render: 563ms)
+ GET /api/studio 200 in 713ms (compile: 159ms, render: 554ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 830ms (compile: 793ms, render: 38ms)
+ GET /api/office/standup/meeting 200 in 857ms (compile: 814ms, render: 43ms)
+ PUT /api/studio 200 in 62ms (compile: 7ms, render: 54ms)
+[SCR-03 V2] Generated initial tasks:
+  1. 网络数据泄露事件如何防范 (article, P4)
+  2. 脑机接口技术最新进展 (video, P5)
+  3. 分析一下AI大模型竞争格局 (video, P5)
+  4. 元宇宙产业发展现状与趋势 (social, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+proxy connected
+[gateway-proxy] browser disconnected
+Upstream gateway WebSocket error. Error: WebSocket was closed before the connection was established
+    at closeBoth (server/gateway-proxy.js:198:21)
+    at WebSocket.<anonymous> (server/gateway-proxy.js:477:7)
+[gateway-proxy] upstream closed code=1006 reason=(none) hadConnect=false responseSent=false
+ GET /office 200 in 1903ms (compile: 11ms, render: 1891ms)
+ GET /api/studio 200 in 336ms (compile: 201ms, render: 135ms)
+ GET /api/studio 200 in 235ms (compile: 107ms, render: 127ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 362ms (compile: 291ms, render: 72ms)
+ GET /api/office/standup/meeting 200 in 410ms (compile: 367ms, render: 43ms)
+ PUT /api/studio 200 in 91ms (compile: 33ms, render: 59ms)
+ PUT /api/studio 200 in 60ms (compile: 26ms, render: 34ms)
+proxy connected
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ PUT /api/studio 200 in 30ms (compile: 14ms, render: 16ms)
+[SCR-03 V2] Generated initial tasks:
+  1. 网络数据泄露事件如何防范 (article, P4)
+  2. 脑机接口技术最新进展 (video, P5)
+  3. 分析一下AI大模型竞争格局 (video, P5)
+  4. 元宇宙产业发展现状与趋势 (social, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+ GET /office 200 in 279ms (compile: 45ms, render: 234ms)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+ GET /api/studio 200 in 49ms (compile: 26ms, render: 22ms)
+ GET /api/studio 200 in 31ms (compile: 8ms, render: 22ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 53ms (compile: 45ms, render: 8ms)
+ GET /api/office/standup/meeting 200 in 60ms (compile: 46ms, render: 15ms)
+ PUT /api/studio 200 in 28ms (compile: 6ms, render: 22ms)
+proxy connected
+ PUT /api/studio 200 in 9ms (compile: 3ms, render: 6ms)
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ PUT /api/studio 200 in 26ms (compile: 7ms, render: 19ms)
+
+[2m[170.07ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[  0.61ms][22m  [2m ↳ [22mQuick bail check
+[2m[  1.44ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[ 55.71ms][22m  [2m ↳ [22mScan for candidates
+[2m[ 16.68ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 42.85ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 49.08ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[47.79ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.01ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.39ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[31.12ms][22m  [2m ↳ [22mScan for candidates
+[2m[11.28ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 1.82ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 2.79ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[86.96ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.02ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.12ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[61.83ms][22m  [2m ↳ [22mScan for candidates
+[2m[11.80ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 5.66ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 7.38ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[29.59ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.00ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.03ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[14.59ms][22m  [2m ↳ [22mScan for candidates
+[2m[11.77ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 1.27ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 1.87ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[44.33ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.00ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.62ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[28.17ms][22m  [2m ↳ [22mScan for candidates
+[2m[12.22ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 1.33ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 1.90ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[27.37ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.00ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.04ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[13.19ms][22m  [2m ↳ [22mScan for candidates
+[2m[11.06ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 1.27ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 1.75ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+○ Compiling /office ...
+[SCR-03 V2] Generated initial tasks:
+  1. 网络数据泄露事件如何防范 (article, P4)
+  2. 脑机接口技术最新进展 (video, P5)
+  3. 分析一下AI大模型竞争格局 (video, P5)
+  4. 元宇宙产业发展现状与趋势 (social, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+ GET /office 200 in 18.2s (compile: 16.2s, render: 1911ms)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+ GET /api/studio 200 in 2.3s (compile: 2.2s, render: 25ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 2.3s (compile: 2.2s, render: 26ms)
+ GET /api/office/standup/meeting 200 in 2.3s (compile: 2.2s, render: 26ms)
+ GET /api/studio 200 in 2.3s (compile: 2.3s, render: 26ms)
+ PUT /api/studio 200 in 7ms (compile: 1320µs, render: 5ms)
+proxy connected
+ PUT /api/studio 200 in 44ms (compile: 25ms, render: 19ms)
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ PUT /api/studio 200 in 15ms (compile: 5ms, render: 10ms)
+[SCR-03 V2] Generated initial tasks:
+  1. 网络数据泄露事件如何防范 (article, P4)
+  2. 脑机接口技术最新进展 (video, P5)
+  3. 分析一下AI大模型竞争格局 (video, P5)
+  4. 元宇宙产业发展现状与趋势 (social, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+ GET /office 200 in 1846ms (compile: 1321ms, render: 525ms)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+ GET /api/studio 200 in 42ms (compile: 14ms, render: 27ms)
+ GET /api/studio 200 in 33ms (compile: 6ms, render: 28ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 42ms (compile: 37ms, render: 4ms)
+ GET /api/office/standup/meeting 200 in 46ms (compile: 42ms, render: 4ms)
+ PUT /api/studio 200 in 9ms (compile: 1629µs, render: 8ms)
+proxy connected
+ PUT /api/studio 200 in 4ms (compile: 1365µs, render: 3ms)
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ PUT /api/studio 200 in 37ms (compile: 18ms, render: 19ms)
+
+[2m[136.80ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[  0.04ms][22m  [2m ↳ [22mQuick bail check
+[2m[  4.30ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[108.31ms][22m  [2m ↳ [22mScan for candidates
+[2m[ 12.33ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[  3.16ms][22m  [2m ↳ [22mBuild utilities
+[2m[  7.95ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[27.55ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.00ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.08ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[13.08ms][22m  [2m ↳ [22mScan for candidates
+[2m[10.19ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 1.66ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 2.47ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+⨯ ./src/features/creation-studio-v2/screens/CreationStudioScreenV2.tsx
+Error:   x Expression expected
+     ,-[/Users/xuekaitian1/Documents/ai-project/Claw3D/src/features/creation-studio-v2/screens/CreationStudioScreenV2.tsx:450:1]
+ 447 |       isExecutingRef.current = false;
+ 448 |     }
+ 449 |   }, []); // 空依赖数组，因为我们使用 setState 的函数形式
+ 450 |   }, []);
+     :    ^
+ 451 | 
+ 452 |   // 自动任务循环
+ 453 |   useEffect(() => {
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/features/creation-studio-v2/screens/CreationStudioScreenV2.tsx
+./src/features/office/components/MultiScreenLayout.tsx
+./src/app/office/page.tsx
+
+[2m[60.93ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.01ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.06ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[37.93ms][22m  [2m ↳ [22mScan for candidates
+[2m[12.01ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 3.48ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 7.30ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+⨯ ./src/features/creation-studio-v2/screens/CreationStudioScreenV2.tsx
+Error:   x Expression expected
+     ,-[/Users/xuekaitian1/Documents/ai-project/Claw3D/src/features/creation-studio-v2/screens/CreationStudioScreenV2.tsx:450:1]
+ 447 |       isExecutingRef.current = false;
+ 448 |     }
+ 449 |   }, []); // 空依赖数组，因为我们使用 setState 的函数形式
+ 450 |   }, []);
+     :    ^
+ 451 | 
+ 452 |   // 自动任务循环
+ 453 |   useEffect(() => {
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/features/creation-studio-v2/screens/CreationStudioScreenV2.tsx
+./src/features/office/components/MultiScreenLayout.tsx
+./src/app/office/page.tsx
+
+[2m[31.03ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.00ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.05ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[16.62ms][22m  [2m ↳ [22mScan for candidates
+[2m[10.92ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 1.41ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 1.97ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+⨯ ./src/features/creation-studio-v2/screens/CreationStudioScreenV2.tsx
+Error:   x Expression expected
+     ,-[/Users/xuekaitian1/Documents/ai-project/Claw3D/src/features/creation-studio-v2/screens/CreationStudioScreenV2.tsx:450:1]
+ 447 |       isExecutingRef.current = false;
+ 448 |     }
+ 449 |   }, []); // 空依赖数组，因为我们使用 setState 的函数形式
+ 450 |   }, []);
+     :    ^
+ 451 | 
+ 452 |   // 自动任务循环
+ 453 |   useEffect(() => {
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/features/creation-studio-v2/screens/CreationStudioScreenV2.tsx
+./src/features/office/components/MultiScreenLayout.tsx
+./src/app/office/page.tsx
+⨯ ./src/features/creation-studio-v2/screens/CreationStudioScreenV2.tsx
+Error:   x Expression expected
+     ,-[/Users/xuekaitian1/Documents/ai-project/Claw3D/src/features/creation-studio-v2/screens/CreationStudioScreenV2.tsx:450:1]
+ 447 |       isExecutingRef.current = false;
+ 448 |     }
+ 449 |   }, []); // 空依赖数组，因为我们使用 setState 的函数形式
+ 450 |   }, []);
+     :    ^
+ 451 | 
+ 452 |   // 自动任务循环
+ 453 |   useEffect(() => {
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/features/creation-studio-v2/screens/CreationStudioScreenV2.tsx
+./src/features/office/components/MultiScreenLayout.tsx
+./src/app/office/page.tsx
+○ Compiling /_error ...
+⨯ ./src/features/creation-studio-v2/screens/CreationStudioScreenV2.tsx
+Error:   x Expression expected
+     ,-[/Users/xuekaitian1/Documents/ai-project/Claw3D/src/features/creation-studio-v2/screens/CreationStudioScreenV2.tsx:450:1]
+ 447 |       isExecutingRef.current = false;
+ 448 |     }
+ 449 |   }, []); // 空依赖数组，因为我们使用 setState 的函数形式
+ 450 |   }, []);
+     :    ^
+ 451 | 
+ 452 |   // 自动任务循环
+ 453 |   useEffect(() => {
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/features/creation-studio-v2/screens/CreationStudioScreenV2.tsx
+./src/features/office/components/MultiScreenLayout.tsx
+./src/app/office/page.tsx
+ GET / 500 in 5.3s (compile: 5.2s, render: 136ms)
+
+[2m[80.80ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.00ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.91ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[49.75ms][22m  [2m ↳ [22mScan for candidates
+[2m[22.35ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 1.67ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 6.01ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[35.43ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.02ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.05ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[14.36ms][22m  [2m ↳ [22mScan for candidates
+[2m[13.16ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 1.70ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 6.08ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+ GET / 307 in 300ms (compile: 212ms, render: 88ms)
+○ Compiling /office ...
+[SCR-03 V2] Generated initial tasks:
+  1. 网络数据泄露事件如何防范 (article, P4)
+  2. 脑机接口技术最新进展 (video, P5)
+  3. 分析一下AI大模型竞争格局 (video, P5)
+  4. 元宇宙产业发展现状与趋势 (social, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+ GET /office 200 in 14.2s (compile: 12.4s, render: 1833ms)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+ GET /api/studio 200 in 1679ms (compile: 1655ms, render: 24ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 1681ms (compile: 1656ms, render: 25ms)
+ GET /api/office/standup/meeting 200 in 1681ms (compile: 1655ms, render: 26ms)
+ GET /api/studio 200 in 1687ms (compile: 1659ms, render: 27ms)
+ PUT /api/studio 200 in 8ms (compile: 2ms, render: 6ms)
+proxy connected
+ PUT /api/studio 200 in 9ms (compile: 3ms, render: 6ms)
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ PUT /api/studio 200 in 25ms (compile: 12ms, render: 13ms)
+ GET /_next/static/chunks/LayoutGroupContext.mjs.map 307 in 1151ms (compile: 1070ms, render: 81ms)
+ GET /.well-known/appspecific/com.chrome.devtools.json 307 in 3.8s (compile: 3.7s, render: 86ms)
+[SCR-03 V2] Generated initial tasks:
+  1. 网络数据泄露事件如何防范 (article, P4)
+  2. 脑机接口技术最新进展 (video, P5)
+  3. 分析一下AI大模型竞争格局 (video, P5)
+  4. 元宇宙产业发展现状与趋势 (social, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+[SCR-03 V2] Generated initial tasks:
+  1. 网络数据泄露事件如何防范 (article, P4)
+  2. 脑机接口技术最新进展 (video, P5)
+  3. 分析一下AI大模型竞争格局 (video, P5)
+  4. 元宇宙产业发展现状与趋势 (social, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+ GET /office 200 in 923ms (compile: 461ms, render: 463ms)
+ GET /office 200 in 55ms (compile: 3ms, render: 52ms)
+[SCR-03 V2] Generated initial tasks:
+  1. 网络数据泄露事件如何防范 (article, P4)
+  2. 脑机接口技术最新进展 (video, P5)
+  3. 分析一下AI大模型竞争格局 (video, P5)
+  4. 元宇宙产业发展现状与趋势 (social, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+ GET /office 200 in 180ms (compile: 48ms, render: 132ms)
+[gateway-proxy] browser disconnected
+[SCR-03 V2] Generated initial tasks:
+  1. 网络数据泄露事件如何防范 (article, P4)
+  2. 脑机接口技术最新进展 (video, P5)
+  3. 分析一下AI大模型竞争格局 (video, P5)
+  4. 元宇宙产业发展现状与趋势 (social, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+ GET /.well-known/appspecific/com.chrome.devtools.json 307 in 152ms (compile: 27ms, render: 126ms)
+ GET /office 200 in 75ms (compile: 3ms, render: 71ms)
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+ GET /api/studio 200 in 128ms (compile: 102ms, render: 26ms)
+ GET /api/studio 200 in 115ms (compile: 89ms, render: 26ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 155ms (compile: 149ms, render: 6ms)
+ GET /api/office/standup/meeting 200 in 234ms (compile: 231ms, render: 3ms)
+ PUT /api/studio 200 in 5ms (compile: 868µs, render: 4ms)
+proxy connected
+ PUT /api/studio 200 in 38ms (compile: 29ms, render: 9ms)
+[SCR-03 V2] Generated initial tasks:
+  1. 网络数据泄露事件如何防范 (article, P4)
+  2. 脑机接口技术最新进展 (video, P5)
+  3. 分析一下AI大模型竞争格局 (video, P5)
+  4. 元宇宙产业发展现状与趋势 (social, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+ GET /_next/static/chunks/LayoutGroupContext.mjs.map 307 in 141ms (compile: 8ms, render: 134ms)
+ GET /office 200 in 98ms (compile: 3ms, render: 95ms)
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=false
+[gateway-proxy] upstream closed code=1008 reason=invalid connect params: at /device: must have required property 'nonce' hadConnect=true responseSent=true
+[gateway-proxy] browser disconnected
+
+[2m[68.19ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.02ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 1.55ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[45.57ms][22m  [2m ↳ [22mScan for candidates
+[2m[12.34ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 5.83ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 2.53ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[31.58ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.00ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.05ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[16.36ms][22m  [2m ↳ [22mScan for candidates
+[2m[11.86ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 1.32ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 1.93ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+○ Compiling /office ...
+[SCR-03 V2] Generated initial tasks:
+  1. 网络数据泄露事件如何防范 (article, P4)
+  2. 脑机接口技术最新进展 (video, P5)
+  3. 分析一下AI大模型竞争格局 (video, P5)
+  4. 元宇宙产业发展现状与趋势 (social, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+[SCR-03 V2] Generated initial tasks:
+  1. 网络数据泄露事件如何防范 (article, P4)
+  2. 脑机接口技术最新进展 (video, P5)
+  3. 分析一下AI大模型竞争格局 (video, P5)
+  4. 元宇宙产业发展现状与趋势 (social, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+ GET /office 200 in 10.3s (compile: 8.0s, render: 2.3s)
+[SCR-03 V2] Generated initial tasks:
+  1. 网络数据泄露事件如何防范 (article, P4)
+  2. 脑机接口技术最新进展 (video, P5)
+  3. 分析一下AI大模型竞争格局 (video, P5)
+  4. 元宇宙产业发展现状与趋势 (social, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+ GET /office 200 in 54ms (compile: 4ms, render: 50ms)
+[SCR-03 V2] Generated initial tasks:
+  1. 网络数据泄露事件如何防范 (article, P4)
+  2. 脑机接口技术最新进展 (video, P5)
+  3. 分析一下AI大模型竞争格局 (video, P5)
+  4. 元宇宙产业发展现状与趋势 (social, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+ GET /.well-known/appspecific/com.chrome.devtools.json 307 in 2.4s (compile: 1632ms, render: 781ms)
+ GET /office 200 in 652ms (compile: 272ms, render: 381ms)
+○ Compiling /api/studio ...
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 4.0s (compile: 3.9s, render: 65ms)
+ GET /api/studio 200 in 4.0s (compile: 3.9s, render: 64ms)
+ GET /api/studio 200 in 4.0s (compile: 3.9s, render: 64ms)
+ GET /api/office/standup/meeting 200 in 4.0s (compile: 3.9s, render: 64ms)
+ PUT /api/studio 200 in 26ms (compile: 3ms, render: 23ms)
+proxy connected
+ PUT /api/studio 200 in 10ms (compile: 3ms, render: 7ms)
+ GET /_next/static/chunks/LayoutGroupContext.mjs.map 307 in 165ms (compile: 56ms, render: 109ms)
+[SCR-03 V2] Generated initial tasks:
+  1. 网络数据泄露事件如何防范 (article, P4)
+  2. 脑机接口技术最新进展 (video, P5)
+  3. 分析一下AI大模型竞争格局 (video, P5)
+  4. 元宇宙产业发展现状与趋势 (social, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=false
+[gateway-proxy] upstream closed code=1008 reason=invalid connect params: at /device: must have required property 'nonce' hadConnect=true responseSent=true
+[gateway-proxy] browser disconnected
+ GET /office 200 in 1501ms (compile: 1109ms, render: 392ms)
+
+[2m[67.28ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.03ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.32ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[43.36ms][22m  [2m ↳ [22mScan for candidates
+[2m[14.09ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 2.59ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 6.70ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[55.00ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.00ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.09ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[34.10ms][22m  [2m ↳ [22mScan for candidates
+[2m[10.30ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 6.10ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 4.27ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[160.63ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[  0.01ms][22m  [2m ↳ [22mQuick bail check
+[2m[  1.64ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[ 73.18ms][22m  [2m ↳ [22mScan for candidates
+[2m[ 58.60ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 10.83ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 16.16ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[52.96ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.01ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.07ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[34.32ms][22m  [2m ↳ [22mScan for candidates
+[2m[14.11ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 1.99ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 2.33ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[269.92ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[  0.48ms][22m  [2m ↳ [22mQuick bail check
+[2m[  5.29ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[ 52.44ms][22m  [2m ↳ [22mScan for candidates
+[2m[ 34.79ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 49.83ms][22m  [2m ↳ [22mBuild utilities
+[2m[125.54ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[41.21ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.02ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.07ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[16.38ms][22m  [2m ↳ [22mScan for candidates
+[2m[10.61ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[10.16ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 3.84ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[74.66ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.02ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.23ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[38.46ms][22m  [2m ↳ [22mScan for candidates
+[2m[15.29ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 4.42ms][22m  [2m ↳ [22mBuild utilities
+[2m[12.85ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+
+[2m[34.83ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[ 0.00ms][22m  [2m ↳ [22mQuick bail check
+[2m[ 0.04ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[18.94ms][22m  [2m ↳ [22mScan for candidates
+[2m[12.23ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[ 1.41ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 2.15ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+○ Compiling /office ...
+[SCR-03 V2] Generated initial tasks:
+  1. 勒索软件攻击激增，企业如何应对 (article, P4)
+  2. 脑机接口技术最新进展 (article, P5)
+  3. 分析一下AI大模型竞争格局 (article, P5)
+  4. 元宇宙产业发展现状与趋势 (article, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+ GET /office 200 in 20.6s (compile: 18.3s, render: 2.3s)
+ GET /api/studio 200 in 1919ms (compile: 1891ms, render: 28ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 1921ms (compile: 1893ms, render: 28ms)
+ GET /api/office/standup/meeting 200 in 1919ms (compile: 1892ms, render: 28ms)
+ GET /api/studio 200 in 1924ms (compile: 1896ms, render: 28ms)
+ PUT /api/studio 200 in 5ms (compile: 1090µs, render: 4ms)
+proxy connected
+ PUT /api/studio 200 in 16ms (compile: 4ms, render: 12ms)
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ PUT /api/studio 200 in 34ms (compile: 12ms, render: 21ms)
+[SCR-03 V2] Generated initial tasks:
+  1. 勒索软件攻击激增，企业如何应对 (article, P4)
+  2. 脑机接口技术最新进展 (article, P5)
+  3. 分析一下AI大模型竞争格局 (article, P5)
+  4. 元宇宙产业发展现状与趋势 (article, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+ GET /office 200 in 8.6s (compile: 5.3s, render: 3.3s)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+ GET /api/studio 200 in 309ms (compile: 200ms, render: 108ms)
+ GET /api/studio 200 in 160ms (compile: 57ms, render: 103ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 315ms (compile: 305ms, render: 10ms)
+ GET /api/office/standup/meeting 200 in 324ms (compile: 317ms, render: 7ms)
+ PUT /api/studio 200 in 22ms (compile: 3ms, render: 19ms)
+proxy connected
+ PUT /api/studio 200 in 12ms (compile: 5ms, render: 7ms)
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ GET /api/studio 200 in 26ms (compile: 12ms, render: 14ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 35ms (compile: 25ms, render: 11ms)
+ GET /api/office/standup/meeting 200 in 40ms (compile: 36ms, render: 4ms)
+ PUT /api/studio 200 in 15ms (compile: 4ms, render: 11ms)
+proxy connected
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=false
+○ Compiling /api/office/layout ...
+[gateway-proxy] upstream closed code=1008 reason=invalid connect params: at /device: must have required property 'nonce' hadConnect=true responseSent=true
+[gateway-proxy] browser disconnected
+ PUT /api/studio 200 in 3.4s (compile: 3.4s, render: 50ms)
+ PUT /api/office/layout 200 in 9.0s (compile: 9.0s, render: 50ms)
+ PUT /api/studio 200 in 8.3s (compile: 8.3s, render: 50ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 226ms (compile: 163ms, render: 63ms)
+ GET /api/studio 200 in 256ms (compile: 242ms, render: 14ms)
+ GET /api/office/standup/meeting 200 in 475ms (compile: 467ms, render: 9ms)
+ PUT /api/office/layout 200 in 32ms (compile: 8ms, render: 24ms)
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+[SCR-03 V2] Generated initial tasks:
+  1. 勒索软件攻击激增，企业如何应对 (article, P4)
+  2. 脑机接口技术最新进展 (article, P5)
+  3. 分析一下AI大模型竞争格局 (article, P5)
+  4. 元宇宙产业发展现状与趋势 (article, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+ GET /office 200 in 3.3s (compile: 2.3s, render: 1050ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 21ms (compile: 5ms, render: 17ms)
+ GET /api/studio 200 in 45ms (compile: 30ms, render: 15ms)
+ GET /api/studio 200 in 39ms (compile: 24ms, render: 15ms)
+ GET /api/office/standup/meeting 200 in 51ms (compile: 46ms, render: 5ms)
+ PUT /api/studio 200 in 16ms (compile: 6ms, render: 10ms)
+ PUT /api/studio 200 in 14ms (compile: 4ms, render: 10ms)
+ PUT /api/office/layout 200 in 19ms (compile: 5ms, render: 13ms)
+proxy connected
+proxy connected
+ PUT /api/studio 200 in 58ms (compile: 42ms, render: 16ms)
+ PUT /api/studio 200 in 56ms (compile: 39ms, render: 17ms)
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=true
+ GET /api/studio 200 in 34ms (compile: 12ms, render: 22ms)
+ PUT /api/studio 200 in 13ms (compile: 3ms, render: 10ms)
+ PUT /api/studio 200 in 14ms (compile: 6ms, render: 8ms)
+[gateway-proxy] browser disconnected
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+[gateway-proxy] upstream closed code=1000 reason=client closed hadConnect=true responseSent=true
+
+[2m[154.92ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[  0.03ms][22m  [2m ↳ [22mQuick bail check
+[2m[  1.97ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[112.65ms][22m  [2m ↳ [22mScan for candidates
+[2m[ 21.68ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[  2.85ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 15.36ms][22m  [2m ↳ [22mUpdate PostCSS AST
+
+[SCR-03 V2] Generated initial tasks:
+  1. 勒索软件攻击激增，企业如何应对 (article, P4)
+  2. 脑机接口技术最新进展 (article, P5)
+  3. 分析一下AI大模型竞争格局 (article, P5)
+  4. 元宇宙产业发展现状与趋势 (article, P3)
+  5. 量子计算商业化进程加速 (article, P5)
+ GET /office 200 in 205ms (compile: 47ms, render: 158ms)
+ GET /api/office/standup/meeting 200 in 81ms (compile: 22ms, render: 59ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 98ms (compile: 87ms, render: 11ms)
+ GET /api/studio 200 in 121ms (compile: 105ms, render: 16ms)
+ GET /api/studio 200 in 116ms (compile: 99ms, render: 17ms)
+ PUT /api/office/layout 200 in 1019ms (compile: 452ms, render: 567ms)
+ PUT /api/studio 200 in 1045ms (compile: 1010ms, render: 36ms)
+ PUT /api/studio 200 in 1041ms (compile: 1005ms, render: 36ms)
+ PUT /api/studio 200 in 25ms (compile: 6ms, render: 20ms)
+ PUT /api/studio 200 in 23ms (compile: 4ms, render: 20ms)
+proxy connected
+proxy connected
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=false
+[gateway-proxy] connect frame client.id=openclaw-control-ui client.mode=webchat hasToken=true hasDevice=false
+[gateway-proxy] browser disconnected
+[gateway-proxy] browser disconnected
+[gateway-proxy] upstream closed code=1008 reason=invalid connect params: at /device: must have required property 'nonce' hadConnect=true responseSent=true
+[gateway-proxy] upstream closed code=1008 reason=invalid connect params: at /device: must have required property 'nonce' hadConnect=true responseSent=true
+ GET /api/office/standup/meeting 200 in 244ms (compile: 85ms, render: 159ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 356ms (compile: 331ms, render: 25ms)
+ GET /api/office/standup/config?gatewayUrl=ws%3A%2F%2Flocalhost%3A18789 200 in 184ms (compile: 67ms, render: 118ms)
+ GET /api/office/standup/meeting 200 in 203ms (compile: 178ms, render: 25ms)
+ GET /api/office/standup/meeting 200 in 210ms (compile: 152ms, render: 58ms)
+
+[2m[337.36ms][22m [@tailwindcss/postcss] src/app/globals.css
+[2m[  0.03ms][22m  [2m ↳ [22mQuick bail check
+[2m[  1.02ms][22m  [2m ↳ [22mRegister full rebuild paths
+[2m[ 49.70ms][22m  [2m ↳ [22mScan for candidates
+[2m[ 14.90ms][22m  [2m ↳ [22mRegister dependency messages
+[2m[213.36ms][22m  [2m ↳ [22mBuild utilities
+[2m[ 56.36ms][22m  [2m ↳ [22mUpdate PostCSS AST
+

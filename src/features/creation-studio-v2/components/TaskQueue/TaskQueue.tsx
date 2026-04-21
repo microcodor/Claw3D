@@ -39,7 +39,7 @@ export default function TaskQueue({
       <div className={styles.header}>
         <h2 className={styles.title}>📋 创作队列</h2>
         <div className={styles.headerRight}>
-          <span className={styles.badge}>{tasks.length}/5</span>
+          <span className={styles.badge}>{tasks.length}</span>
           <div className={styles.statusIndicator}>
             <span className={styles.statusDot}></span>
             <span className={styles.statusText}>自动运行中</span>
@@ -57,6 +57,7 @@ export default function TaskQueue({
           <div className={styles.taskList}>
             <AnimatePresence mode="popLayout">
               {tasks.map((task, index) => {
+                // 当前正在执行的任务：通过ID匹配
                 const isActive = currentTask?.id === task.id;
                 
                 return (
