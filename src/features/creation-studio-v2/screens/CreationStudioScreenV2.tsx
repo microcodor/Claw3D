@@ -775,7 +775,7 @@ const MOCK_MESSAGES = [
 
 ### 1. 失效的对象级授权（BOLA）
 **风险**：攻击者通过修改ID访问其他用户数据
-**示例**：`/api/users/123` → `/api/users/124`
+**示例**：'/api/users/123' → '/api/users/124'
 **防御**：实施严格的授权检查
 
 ### 2. 失效的身份验证
@@ -795,12 +795,12 @@ const MOCK_MESSAGES = [
 
 ### 5. 失效的功能级授权
 **风险**：普通用户执行管理员操作
-**示例**：`/api/admin/delete` 未检查权限
+**示例**：'/api/admin/delete' 未检查权限
 **防御**：基于角色的访问控制（RBAC）
 
 ### 6. 批量分配
 **风险**：通过API修改不应修改的字段
-**示例**：修改`isAdmin`字段提权
+**示例**：修改 isAdmin 字段提权
 **防御**：白名单允许的字段
 
 ### 7. 安全配置错误
@@ -815,7 +815,7 @@ const MOCK_MESSAGES = [
 
 ### 9. 不当的资产管理
 **风险**：旧版本API未下线、影子API
-**示例**：`/api/v1` 仍可访问但无人维护
+**示例**：'/api/v1' 仍可访问但无人维护
 **防御**：API清单管理、版本控制
 
 ### 10. 日志和监控不足
@@ -1035,7 +1035,7 @@ const MOCK_MESSAGES = [
 FROM node:18-alpine
 
 # 创建非root用户
-RUN addgroup -g 1001 -S nodejs && \\
+RUN addgroup -g 1001 -S nodejs && \\\\
     adduser -S nodejs -u 1001
 
 # 设置工作目录
@@ -1057,7 +1057,7 @@ USER nodejs
 EXPOSE 3000
 
 # 健康检查
-HEALTHCHECK --interval=30s --timeout=3s \\
+HEALTHCHECK --interval=30s --timeout=3s \\\\
   CMD node healthcheck.js
 
 # 启动命令
@@ -1065,10 +1065,10 @@ CMD ["node", "server.js"]
 \`\`\`
 
 ### 运行时安全
-- **只读文件系统**：`--read-only`
-- **限制资源**：`--memory`, `--cpus`
-- **禁用特权模式**：避免`--privileged`
-- **限制能力**：`--cap-drop=ALL --cap-add=NET_BIND_SERVICE`
+- **只读文件系统**：--read-only
+- **限制资源**：--memory, --cpus
+- **禁用特权模式**：避免 --privileged
+- **限制能力**：--cap-drop=ALL --cap-add=NET_BIND_SERVICE
 - **安全计算模式**：使用seccomp配置
 
 ### 网络安全
