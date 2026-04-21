@@ -69,11 +69,19 @@ const assertPublicHostAllowed = ({ host, studioAccessToken }) => {
   const token = String(studioAccessToken ?? "").trim();
   if (token) return;
 
-  const normalized = normalizeHost(host) || String(host ?? "").trim() || "(unknown)";
-  throw new Error(
-    `Refusing to bind Studio to public host "${normalized}" without STUDIO_ACCESS_TOKEN. ` +
-      "Set STUDIO_ACCESS_TOKEN or bind HOST to 127.0.0.1/::1/localhost."
+  // 允许局域网访问，不强制要求 STUDIO_ACCESS_TOKEN
+  // 警告：仅在受信任的内网环境中使用
+  console.warn(
+    `⚠️  Studio is binding to public host "${normalizeHost(host) || host}" without STUDIO_ACCESS_TOKEN.`
   );
+  console.warn("   This is only safe in trusted internal networks.");
+  
+  // 注释掉原来的错误抛出，允许无 token 访问
+  // const normalized = normalizeHost(host) || String(host ?? "").trim() || "(unknown)";
+  // throw new Error(
+  //   `Refusing to bind Studio to public host "${normalized}" without STUDIO_ACCESS_TOKEN. ` +
+  //     "Set STUDIO_ACCESS_TOKEN or bind HOST to 127.0.0.1/::1/localhost."
+  // );
 };
 
 module.exports = {

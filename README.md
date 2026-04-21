@@ -284,13 +284,23 @@ cp .env.example .env
 编辑 `.env` 文件：
 ```env
 # 服务器配置
-HOST=0.0.0.0          # 局域网访问设置为 0.0.0.0
+HOST=0.0.0.0          # 局域网访问设置为 0.0.0.0，仅本机访问设置为 127.0.0.1
 PORT=3000             # 端口号
+
+# 访问令牌（可选）
+# 局域网内网环境可以不设置，公网部署必须设置
+# STUDIO_ACCESS_TOKEN=your_strong_password
 
 # OpenClaw Gateway（可选）
 NEXT_PUBLIC_GATEWAY_URL=ws://localhost:18789
 CLAW3D_GATEWAY_TOKEN=your_token_here
 ```
+
+> 💡 **局域网访问配置**：
+> - 设置 `HOST=0.0.0.0` 允许局域网内其他设备访问
+> - 内网环境可以不设置 `STUDIO_ACCESS_TOKEN`（已修改网络策略允许）
+> - 公网部署必须设置 `STUDIO_ACCESS_TOKEN` 保护应用安全
+> - 详细配置说明请查看 [局域网访问配置说明.md](局域网访问配置说明.md)
 
 4. **启动开发服务器**
 ```bash
@@ -298,9 +308,22 @@ npm run dev
 ```
 
 5. **访问应用**
+
+**本机访问**：
 ```
 http://localhost:3000/office
 ```
+
+**局域网访问**（其他设备）：
+```
+http://192.168.0.132:3000/office
+```
+（将 IP 地址替换为服务器的实际局域网 IP）
+
+> ⚠️ **安全提示**：
+> - 局域网访问已配置为无需访问令牌（仅限内网环境）
+> - 如需公网访问，请务必设置 `STUDIO_ACCESS_TOKEN`
+> - 建议配置防火墙规则限制访问来源
 
 ---
 
