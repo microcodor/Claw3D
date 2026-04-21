@@ -4,7 +4,7 @@ module.exports = {
       name: 'claw3d',
       script: 'npm',
       args: 'start',
-      cwd: '/home/openclaw1/claw3d',
+      cwd: '/home/openclaw1/Claw3D',
       instances: 1,
       autorestart: true,
       watch: false,
