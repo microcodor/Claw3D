@@ -321,7 +321,37 @@ npm run start
 
 ### 服务器部署
 
-#### 方式一：使用部署脚本
+> 💡 **推荐使用 PM2 部署** - 详细指南请查看 [PM2_DEPLOYMENT_GUIDE.md](PM2_DEPLOYMENT_GUIDE.md)
+
+#### 方式一：PM2 部署（推荐）
+
+**快速部署**：
+```bash
+# 1. 构建项目
+npm run build
+
+# 2. 使用 PM2 启动
+pm2 start ecosystem.config.js
+
+# 3. 保存配置
+pm2 save
+
+# 4. 设置开机自启
+pm2 startup
+```
+
+**常用命令**：
+```bash
+pm2 list              # 查看状态
+pm2 logs claw3d       # 查看日志
+pm2 restart claw3d    # 重启应用
+pm2 stop claw3d       # 停止应用
+pm2 monit             # 实时监控
+```
+
+**完整指南**: 查看 [PM2_DEPLOYMENT_GUIDE.md](PM2_DEPLOYMENT_GUIDE.md)
+
+#### 方式二：使用部署脚本
 
 1. **配置部署脚本**
 ```bash
