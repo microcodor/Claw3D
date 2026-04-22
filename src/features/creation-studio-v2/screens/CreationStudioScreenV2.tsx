@@ -435,9 +435,9 @@ const STORAGE_KEYS = {
   INITIALIZED: 'scr03_initialized', // 标记是否已初始化
 };
 
-// 生成初始任务队列
+// 生成初始任务队列（10个选题全部显示）
 function generateInitialTasks(): CreationTask[] {
-  const tasks = Array.from({ length: 5 }, () => autoGenerateTask());
+  const tasks = Array.from({ length: 10 }, () => autoGenerateTask());
   console.log('[SCR-03 V2] Generated initial tasks:');
   tasks.forEach((task, index) => {
     console.log(`  ${index + 1}. ${task.title} (${task.type}, P${task.priority})`);
@@ -538,21 +538,21 @@ export default function CreationStudioScreenV2() {
         startedAt: new Date(),
       });
 
-      // 2. 思考过程（8秒：4步 × 2秒）
-      console.log('[SCR-03 V2] Phase 1: Thinking (8s)...');
-      await sleep(8000);
+      // 2. 思考过程（16秒：4步 × 4秒，速度调慢一倍）
+      console.log('[SCR-03 V2] Phase 1: Thinking (16s)...');
+      await sleep(16000);
 
       // 3. 生成内容
-      console.log('[SCR-03 V2] Phase 2: Generating content (6s)...');
+      console.log('[SCR-03 V2] Phase 2: Generating content (12s)...');
       const content = generateMockContent(task);
       const wordCount = content.length;
 
-      // 4. 流式输出（6秒 - 慢速打字机效果）
-      await sleep(6000);
+      // 4. 流式输出（12秒 - 慢速打字机效果，速度调慢一倍）
+      await sleep(12000);
 
-      // 5. 完成动画（1秒）
-      console.log('[SCR-03 V2] Phase 3: Completion animation (1s)...');
-      await sleep(1000);
+      // 5. 完成动画（2秒，速度调慢一倍）
+      console.log('[SCR-03 V2] Phase 3: Completion animation (2s)...');
+      await sleep(2000);
 
       // 6. 完成任务
       const completedTask: CreationTask = {
@@ -562,7 +562,7 @@ export default function CreationStudioScreenV2() {
         output: content,
         metadata: {
           wordCount,
-          duration: 15, // 总耗时15秒（8+6+1）
+          duration: 30, // 总耗时30秒（16+12+2），速度调慢一倍
         },
       };
 
@@ -597,9 +597,9 @@ export default function CreationStudioScreenV2() {
       console.log('[SCR-03 V2] Finally: setting isExecutingRef.current = false');
       isExecutingRef.current = false;
       
-      // 等待2秒后，useEffect 会自动触发下一个任务
-      console.log('[SCR-03 V2] Waiting 2s before next task can start...');
-      await sleep(2000);
+      // 等待4秒后，useEffect 会自动触发下一个任务（速度调慢一倍）
+      console.log('[SCR-03 V2] Waiting 4s before next task can start...');
+      await sleep(4000);
       console.log('[SCR-03 V2] Ready for next task');
     }
   }, []); // 空依赖数组，因为我们使用 setState 的函数形式
